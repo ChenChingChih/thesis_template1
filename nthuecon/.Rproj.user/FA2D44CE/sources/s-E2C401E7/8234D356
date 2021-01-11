@@ -1,0 +1,24 @@
+{
+    "id": "8234D356",
+    "path": "~/nthuecon/01-install-compile.Rmd",
+    "project_path": "01-install-compile.Rmd",
+    "type": "r_markdown",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1610289100283.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "cursorPosition": "33,37",
+        "scrollLine": "22"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1610289117,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1610289117318,
+    "read_only": false,
+    "read_only_alternatives": []
+}
