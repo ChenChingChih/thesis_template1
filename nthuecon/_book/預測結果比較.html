@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>第 5 章 預測結果比較 | 臺大論文模板</title>
+  <meta name="description" content="第 5 章 預測結果比較 | 臺大論文模板" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="第 5 章 預測結果比較 | 臺大論文模板" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="liao961120/ntuthesis" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="第 5 章 預測結果比較 | 臺大論文模板" />
+  
+  
+  
+
+<meta name="author" content="廖永賦" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="方法.html"/>
+<link rel="next" href="結論.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script>
+// Add target_blank to external link
+// See article-header.html for auto adding ID to h1,h2,h3
+$(document).ready(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">NTU Thesis</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>關於</a></li>
+<li class="chapter" data-level="1" data-path="研究動機.html"><a href="研究動機.html"><i class="fa fa-check"></i><b>1</b> 研究動機</a></li>
+<li class="chapter" data-level="2" data-path="文獻回顧.html"><a href="文獻回顧.html"><i class="fa fa-check"></i><b>2</b> 文獻回顧</a></li>
+<li class="chapter" data-level="3" data-path="資料與方法.html"><a href="資料與方法.html"><i class="fa fa-check"></i><b>3</b> 資料與方法</a><ul>
+<li class="chapter" data-level="3.1" data-path="資料與方法.html"><a href="資料與方法.html#資料"><i class="fa fa-check"></i><b>3.1</b> 資料</a></li>
+<li class="chapter" data-level="3.2" data-path="資料與方法.html"><a href="資料與方法.html#台灣失業率趨勢圖"><i class="fa fa-check"></i><b>3.2</b> 台灣失業率趨勢圖</a></li>
+<li class="chapter" data-level="3.3" data-path="資料與方法.html"><a href="資料與方法.html#類神經網絡的資料標準化"><i class="fa fa-check"></i><b>3.3</b> 類神經網絡的資料標準化</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="方法.html"><a href="方法.html"><i class="fa fa-check"></i><b>4</b> 方法</a><ul>
+<li class="chapter" data-level="4.1" data-path="方法.html"><a href="方法.html#單根與平穩性檢定"><i class="fa fa-check"></i><b>4.1</b> 單根與平穩性檢定</a></li>
+<li class="chapter" data-level="4.2" data-path="方法.html"><a href="方法.html#以迴歸移除結構性斷裂點的效果"><i class="fa fa-check"></i><b>4.2</b> 以迴歸移除結構性斷裂點的效果</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="方法.html"><a href="方法.html#類神經網絡的方法"><i class="fa fa-check"></i><b>4.2.1</b> 類神經網絡的方法</a></li>
+<li class="chapter" data-level="4.2.2" data-path="方法.html"><a href="方法.html#具結構斷裂的季節性差分整合移動平均自迴歸模型"><i class="fa fa-check"></i><b>4.2.2</b> 具結構斷裂的季節性差分整合移動平均自迴歸模型</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="方法.html"><a href="方法.html#挑選最佳的具結構斷裂的季節性差分整合移動平均自迴歸模型"><i class="fa fa-check"></i><b>4.3</b> 挑選最佳的具結構斷裂的季節性差分整合移動平均自迴歸模型</a></li>
+<li class="chapter" data-level="4.4" data-path="方法.html"><a href="方法.html#檢定殘差是否有非線性"><i class="fa fa-check"></i><b>4.4</b> 檢定殘差是否有非線性</a></li>
+<li class="chapter" data-level="4.5" data-path="方法.html"><a href="方法.html#簡介類神經網絡"><i class="fa fa-check"></i><b>4.5</b> 簡介類神經網絡</a></li>
+<li class="chapter" data-level="4.6" data-path="方法.html"><a href="方法.html#長短期記憶網絡"><i class="fa fa-check"></i><b>4.6</b> 長短期記憶網絡</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="方法.html"><a href="方法.html#長短期記憶網絡的參數設定"><i class="fa fa-check"></i><b>4.6.1</b> 長短期記憶網絡的參數設定</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="方法.html"><a href="方法.html#時序卷積網絡"><i class="fa fa-check"></i><b>4.7</b> 時序卷積網絡</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="方法.html"><a href="方法.html#時序卷積網絡與季節性自迴歸"><i class="fa fa-check"></i><b>4.7.1</b> 時序卷積網絡與季節性自迴歸</a></li>
+<li class="chapter" data-level="4.7.2" data-path="方法.html"><a href="方法.html#時序卷積網絡的參數設定"><i class="fa fa-check"></i><b>4.7.2</b> 時序卷積網絡的參數設定</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="預測結果比較.html"><a href="預測結果比較.html"><i class="fa fa-check"></i><b>5</b> 預測結果比較</a><ul>
+<li class="chapter" data-level="5.1" data-path="預測結果比較.html"><a href="預測結果比較.html#比較具結構斷裂的季節性差分整合移動平均自迴歸模型類神經網絡的樣本外預測的均方根誤差"><i class="fa fa-check"></i><b>5.1</b> 比較具結構斷裂的季節性差分整合移動平均自迴歸模型、類神經網絡的樣本外預測的均方根誤差</a></li>
+<li class="chapter" data-level="5.2" data-path="預測結果比較.html"><a href="預測結果比較.html#類神經網絡的訓練狀況"><i class="fa fa-check"></i><b>5.2</b> 類神經網絡的訓練狀況</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="結論.html"><a href="結論.html"><i class="fa fa-check"></i><b>6</b> 結論</a><ul>
+<li class="chapter" data-level="6.1" data-path="結論.html"><a href="結論.html#如何改進類神經網絡"><i class="fa fa-check"></i><b>6.1</b> 如何改進類神經網絡</a></li>
+</ul></li>
+<li class="appendix"><span><b>附錄</b></span></li>
+<li class="chapter" data-level="A" data-path="latex-cite-pkg.html"><a href="latex-cite-pkg.html"><i class="fa fa-check"></i><b>A</b> LaTeX 文獻引用</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>參考資料</a></li>
+<li class="divider"></li>
+<li><a href="https://liao961120.github.io/ntuthesis" target="blank"><i class="fas fa-home"></i> &nbsp;套件網站</a></li>
+<li><a href="https://github.com/liao961120/ntuthesis" target="blank"><i class="fab fa-github"></i> &nbsp; GitHub</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">臺大論文模板</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="預測結果比較" class="section level1">
+<h1><span class="header-section-number">第 5 章</span> 預測結果比較</h1>
+<p>回顧資料分群方式，分做訓練、驗證及測試集，<a href="預測結果比較.html#fig:TCNpred">5.1</a> 與<a href="預測結果比較.html#fig:LSTMpred">5.2</a> 中以虛線將不同群分開，1978年1月至2008年3月作為訓練集，占總資料的70%；資料2008年4月至2013年9月作為驗證集，共78筆，占總資料的15%；資料2013年10月至2019年12月作為測試集，共75筆，占總資料的15%。類神經網絡個別訓練1000回(epochs)。</p>
+<p>雙時序卷積網絡是以迭代方式進行預測，將3、6、9、12個月後的失業率預測呈現，如下圖<a href="預測結果比較.html#fig:TCNpred">5.1</a></p>
+<div class="figure" style="text-align: center"><span id="fig:TCNpred"></span>
+<img src="fig/TCN/0112/TCN_pre3.png" alt="時序卷積網絡預測" width=".5\linewidth" /><img src="fig/TCN/0112/TCN_pre6.png" alt="時序卷積網絡預測" width=".5\linewidth" /><img src="fig/TCN/0112/TCN_pre9.png" alt="時序卷積網絡預測" width=".5\linewidth" /><img src="fig/TCN/0112/TCN_pre12.png" alt="時序卷積網絡預測" width=".5\linewidth" />
+<p class="caption">
+圖 5.1: 時序卷積網絡預測
+</p>
+</div>
+<p>長短期記憶網絡是以直接預測數個月後的失業率，將3、6、9、12個月後的失業率預測呈現，如下圖<a href="預測結果比較.html#fig:LSTMpred">5.2</a></p>
+<div class="figure" style="text-align: center"><span id="fig:LSTMpred"></span>
+<img src="fig/LSTM/0111/LSTMpre3.png" alt="非同步隨機梯度下降的權重捨棄的長短期記憶網絡預測" width=".5\linewidth" /><img src="fig/LSTM/0111/LSTMpre6.png" alt="非同步隨機梯度下降的權重捨棄的長短期記憶網絡預測" width=".5\linewidth" /><img src="fig/LSTM/0111/LSTMpre9.png" alt="非同步隨機梯度下降的權重捨棄的長短期記憶網絡預測" width=".5\linewidth" /><img src="fig/LSTM/0111/LSTMpre12.png" alt="非同步隨機梯度下降的權重捨棄的長短期記憶網絡預測" width=".5\linewidth" />
+<p class="caption">
+圖 5.2: 非同步隨機梯度下降的權重捨棄的長短期記憶網絡預測
+</p>
+</div>
+<p>具結構斷裂的季節性差分整合移動平均自迴歸模型的資料分群，將訓練與測試合併為訓練集，僅有訓練集與測試集之分，<a href="預測結果比較.html#fig:SARIMApred">5.3</a>中以虛線將不同群分開。1978年1月 ~ 2013年9月作為訓練集，占總資料的85%；資料2013年10月 ~ 2019年12月作為測試集，共75筆，占總資料的15%。</p>
+<p>結構斷裂的季節性差分整合移動平均自迴歸模型是以迭代方式進行預測，將3、6、9、12個月後的失業率預測呈現，如下圖<a href="預測結果比較.html#fig:SARIMApred">5.3</a></p>
+<div class="figure" style="text-align: center"><span id="fig:SARIMApred"></span>
+<img src="fig/ARIMA/arima_f3.png" alt="具結構斷裂的季節性差分整合移動平均自迴歸模型預測" width=".5\linewidth" /><img src="fig/ARIMA/arima_f6.png" alt="具結構斷裂的季節性差分整合移動平均自迴歸模型預測" width=".5\linewidth" /><img src="fig/ARIMA/arima_f9.png" alt="具結構斷裂的季節性差分整合移動平均自迴歸模型預測" width=".5\linewidth" /><img src="fig/ARIMA/arima_f12.png" alt="具結構斷裂的季節性差分整合移動平均自迴歸模型預測" width=".5\linewidth" />
+<p class="caption">
+圖 5.3: 具結構斷裂的季節性差分整合移動平均自迴歸模型預測
+</p>
+</div>
+<div id="比較具結構斷裂的季節性差分整合移動平均自迴歸模型類神經網絡的樣本外預測的均方根誤差" class="section level2">
+<h2><span class="header-section-number">5.1</span> 比較具結構斷裂的季節性差分整合移動平均自迴歸模型、類神經網絡的樣本外預測的均方根誤差</h2>
+<p>透過樣本外預測的均方根誤差，藉由模型預測值與實際值間的落差，來衡量模型的好壞。本研究是以測試集的失業率，也就是2013年10月至2019年12月作為樣本外預測的資料，以數學式表示，均方根誤差(root mean square error, RMSE)</p>
+<p><span class="math display">\[\sqrt{\frac{\sum_{t=1}^n(\hat{y_t}-y_t)}{n}}\]</span></p>
+<table>
+<caption><span id="tab:RMSE">表 5.1: </span>樣本外預測的均方根誤差</caption>
+<thead>
+<tr class="header">
+<th align="right">幾個月後預測</th>
+<th align="right">SARIMAX</th>
+<th align="right">STCN</th>
+<th align="right">AWDLSTM</th>
+<th align="right">ARIMAX</th>
+<th align="right">TCN</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">0.04</td>
+<td align="right">0.04</td>
+<td align="right">0.07</td>
+<td align="right">0.06</td>
+<td align="right">0.05</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">0.06</td>
+<td align="right">0.06</td>
+<td align="right">0.11</td>
+<td align="right">0.10</td>
+<td align="right">0.07</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">0.08</td>
+<td align="right">0.08</td>
+<td align="right">0.13</td>
+<td align="right">0.13</td>
+<td align="right">0.08</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">0.09</td>
+<td align="right">0.09</td>
+<td align="right">0.16</td>
+<td align="right">0.14</td>
+<td align="right">0.09</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">0.10</td>
+<td align="right">0.10</td>
+<td align="right">0.19</td>
+<td align="right">0.15</td>
+<td align="right">0.10</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">0.11</td>
+<td align="right">0.11</td>
+<td align="right">0.20</td>
+<td align="right">0.15</td>
+<td align="right">0.11</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="right">0.12</td>
+<td align="right">0.12</td>
+<td align="right">0.21</td>
+<td align="right">0.16</td>
+<td align="right">0.11</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="right">0.13</td>
+<td align="right">0.12</td>
+<td align="right">0.22</td>
+<td align="right">0.16</td>
+<td align="right">0.12</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="right">0.14</td>
+<td align="right">0.13</td>
+<td align="right">0.22</td>
+<td align="right">0.16</td>
+<td align="right">0.11</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="right">0.15</td>
+<td align="right">0.16</td>
+<td align="right">0.22</td>
+<td align="right">0.16</td>
+<td align="right">0.12</td>
+</tr>
+<tr class="odd">
+<td align="right">11</td>
+<td align="right">0.16</td>
+<td align="right">0.13</td>
+<td align="right">0.22</td>
+<td align="right">0.16</td>
+<td align="right">0.13</td>
+</tr>
+<tr class="even">
+<td align="right">12</td>
+<td align="right">0.16</td>
+<td align="right">0.17</td>
+<td align="right">0.23</td>
+<td align="right">0.15</td>
+<td align="right">0.13</td>
+</tr>
+</tbody>
+</table>
+<p>從表<a href="預測結果比較.html#tab:RMSE">5.1</a>，比較均方根誤差，雙時序卷積網絡(STCN)，除了在一個月後預測比SARIMA模型差，其餘幾個月後的預測皆為最佳。而長短期(AWDLSTM)模型的表現遜色於雙時序卷積網絡、SARIMA模型、ARIMAX。時序卷積網絡(TCN)預測能力，稍落後SARIMA模型，但考量季節性變化後的雙時序卷積網絡，則優於SARIMA模型。
+從SARIMA與ARIMAX間、雙時序卷積網絡與時序卷積網絡間，可以看到考慮失業率的季節性後，確實可以讓預測能力有所提升。</p>
+</div>
+<div id="類神經網絡的訓練狀況" class="section level2">
+<h2><span class="header-section-number">5.2</span> 類神經網絡的訓練狀況</h2>
+<p>類神經網絡可以透過驗證集損失函數(loss function) 的變化，來了解模型是否有過度擬合的問題，當驗證集的損失函數沒有隨著訊連次數提升而下降，反而驗證集的損失函數值隨著時間遞增，就存在過度擬合的問題。而驗證集的損失函數值與訓練集的損失函數值水準值的高低，代表不同的輸入值所產生的損失函數的不同，不意味著存有過度擬合的問題。
+對於圖<a href="預測結果比較.html#fig:LSTMloss">5.4</a>非同步隨機梯度下降的權重捨棄的長短期記憶網絡，不論3、6、9、12個月後的預測的模型，其驗證集的損失函數值都有隨著訓練次數增加而遞減未反映出過度訓練。對於圖<a href="預測結果比較.html#fig:TCNloss">5.5</a>TCN模型不論3、6、9、12個月後的預測的模型，亦未有過度訓練的問題。</p>
+<div class="figure" style="text-align: center"><span id="fig:LSTMloss"></span>
+<img src="fig/LSTM/0111/LSTMloss3.png" alt="非同步隨機梯度下降的權重捨棄的長短期記憶網絡的訓練誤差變化" width=".5\linewidth" /><img src="fig/LSTM/0111/LSTMloss6.png" alt="非同步隨機梯度下降的權重捨棄的長短期記憶網絡的訓練誤差變化" width=".5\linewidth" /><img src="fig/LSTM/0111/LSTMloss9.png" alt="非同步隨機梯度下降的權重捨棄的長短期記憶網絡的訓練誤差變化" width=".5\linewidth" /><img src="fig/LSTM/0111/LSTMloss9.png" alt="非同步隨機梯度下降的權重捨棄的長短期記憶網絡的訓練誤差變化" width=".5\linewidth" />
+<p class="caption">
+圖 5.4: 非同步隨機梯度下降的權重捨棄的長短期記憶網絡的訓練誤差變化
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:TCNloss"></span>
+<img src="fig/TCN/0112/TCN_loss3.png" alt="時序卷積網絡的訓練誤差變化" width=".5\linewidth" /><img src="fig/TCN/0112/TCN_loss6.png" alt="時序卷積網絡的訓練誤差變化" width=".5\linewidth" /><img src="fig/TCN/0112/TCN_loss9.png" alt="時序卷積網絡的訓練誤差變化" width=".5\linewidth" /><img src="fig/TCN/0112/TCN_loss12.png" alt="時序卷積網絡的訓練誤差變化" width=".5\linewidth" />
+<p class="caption">
+圖 5.5: 時序卷積網絡的訓練誤差變化
+</p>
+</div>
+</div>
+</div>
+<br><br>
+<div id="disqus_thread"></div>
+<script>
+
+//var disqus_config = function () { 
+//  this.language = "zh-Hant";
+//};
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="方法.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="結論.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/liao961120/ntuthesis/edit/master/example-thesis/01-install-compile.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ntu-bookdown.pdf"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+
+	 Optimal (m+1)-segment partition: 
+
+Call:
+breakpoints.formula(formula = dta_ts ~ 1)
+
+Breakpoints at observation number:
+                           
+m = 1           273        
+m = 2       203 278        
+m = 3       205 280     407
+m = 4   120 205 280     407
+m = 5   120 204 279 354 429
+
+Corresponding to breakdates:
+                                                  
+m = 1                     2000(9)                 
+m = 2            1994(11) 2001(2)                 
+m = 3            1995(1)  2001(4)         2011(11)
+m = 4   1987(12) 1995(1)  2001(4)         2011(11)
+m = 5   1987(12) 1994(12) 2001(3) 2007(6) 2013(9) 
+
+Fit:
+                                             
+m   0      1      2      3      4      5     
+RSS  854.1  209.7  179.9  150.9  139.8  140.6
+BIC 1708.6 1013.2  948.5  872.3  846.3  861.4

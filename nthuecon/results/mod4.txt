@@ -1,0 +1,13 @@
+Series: . 
+Regression with ARIMA(2,0,1)(2,0,0)[12] errors 
+
+Coefficients:
+         ar1      ar2      ma1    sar1    sar2  intercept     s41
+      1.8915  -0.8983  -0.8507  0.3659  0.3196     0.8131  0.6580
+s.e.  0.0464   0.0449   0.0578  0.0462  0.0464     0.5037  0.1433
+          s42      s43      s44
+      -0.4560  -2.2853  -1.4822
+s.e.   0.2032   0.2523   0.2933
+
+sigma^2 estimated as 0.02575:  log likelihood=176.23
+AIC=-330.45   AICc=-329.82   BIC=-285.78

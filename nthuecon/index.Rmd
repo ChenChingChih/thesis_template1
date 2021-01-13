@@ -10,9 +10,9 @@ two-side: false  # Whether to start new chapter on odd pages
 indent: false    # Indent new paragraph, else adds space between paragraphs 
 linestretch: 1.5   # If Chinese: 1.5
 linestretch-code: 1  # linestretch for code chunks
-watermark: watermark.png    # ntu watermark file (must be in root dir)
+# watermark: watermark.png    # ntu watermark file (must be in root dir)
 link-citations: yes         # internal links to references
-bibliography: ref.bib
+bibliography: references.bib
 ## Shouldn't touch things below unless familiar with R Markdown
 #biblio-style: apa #authoryear
 #biblatexoptions: [backend = biber, style = caspervector, utf8, sorting = cenyt]
@@ -61,7 +61,7 @@ Remove or wrap them around HTML comments if don't want to display them in GitBoo
 
 
 ```{r setup, include=FALSE}
-knitr::opts_knit$set(root.dir='R')
+# knitr::opts_knit$set(root.dir='R')
 #knitr::opts_chunk$set(fig.pos = 'H')
 options(digits = 2) # round values of vars to 2 digits when printed
 knitr::opts_chunk$set(

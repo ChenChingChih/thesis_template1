@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>第 2 章 文獻回顧 | 臺大論文模板</title>
+  <meta name="description" content="第 2 章 文獻回顧 | 臺大論文模板" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="第 2 章 文獻回顧 | 臺大論文模板" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="liao961120/ntuthesis" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="第 2 章 文獻回顧 | 臺大論文模板" />
+  
+  
+  
+
+<meta name="author" content="廖永賦" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="研究動機.html"/>
+<link rel="next" href="資料與方法.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script>
+// Add target_blank to external link
+// See article-header.html for auto adding ID to h1,h2,h3
+$(document).ready(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">NTU Thesis</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>關於</a></li>
+<li class="chapter" data-level="1" data-path="研究動機.html"><a href="研究動機.html"><i class="fa fa-check"></i><b>1</b> 研究動機</a></li>
+<li class="chapter" data-level="2" data-path="文獻回顧.html"><a href="文獻回顧.html"><i class="fa fa-check"></i><b>2</b> 文獻回顧</a></li>
+<li class="chapter" data-level="3" data-path="資料與方法.html"><a href="資料與方法.html"><i class="fa fa-check"></i><b>3</b> 資料與方法</a><ul>
+<li class="chapter" data-level="3.1" data-path="資料與方法.html"><a href="資料與方法.html#資料"><i class="fa fa-check"></i><b>3.1</b> 資料</a></li>
+<li class="chapter" data-level="3.2" data-path="資料與方法.html"><a href="資料與方法.html#台灣失業率趨勢圖"><i class="fa fa-check"></i><b>3.2</b> 台灣失業率趨勢圖</a></li>
+<li class="chapter" data-level="3.3" data-path="資料與方法.html"><a href="資料與方法.html#類神經網絡的資料標準化"><i class="fa fa-check"></i><b>3.3</b> 類神經網絡的資料標準化</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="方法.html"><a href="方法.html"><i class="fa fa-check"></i><b>4</b> 方法</a><ul>
+<li class="chapter" data-level="4.1" data-path="方法.html"><a href="方法.html#單根與平穩性檢定"><i class="fa fa-check"></i><b>4.1</b> 單根與平穩性檢定</a></li>
+<li class="chapter" data-level="4.2" data-path="方法.html"><a href="方法.html#以迴歸移除結構性斷裂點的效果"><i class="fa fa-check"></i><b>4.2</b> 以迴歸移除結構性斷裂點的效果</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="方法.html"><a href="方法.html#類神經網絡的方法"><i class="fa fa-check"></i><b>4.2.1</b> 類神經網絡的方法</a></li>
+<li class="chapter" data-level="4.2.2" data-path="方法.html"><a href="方法.html#具結構斷裂的季節性差分整合移動平均自迴歸模型"><i class="fa fa-check"></i><b>4.2.2</b> 具結構斷裂的季節性差分整合移動平均自迴歸模型</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="方法.html"><a href="方法.html#挑選最佳的具結構斷裂的季節性差分整合移動平均自迴歸模型"><i class="fa fa-check"></i><b>4.3</b> 挑選最佳的具結構斷裂的季節性差分整合移動平均自迴歸模型</a></li>
+<li class="chapter" data-level="4.4" data-path="方法.html"><a href="方法.html#檢定殘差是否有非線性"><i class="fa fa-check"></i><b>4.4</b> 檢定殘差是否有非線性</a></li>
+<li class="chapter" data-level="4.5" data-path="方法.html"><a href="方法.html#簡介類神經網絡"><i class="fa fa-check"></i><b>4.5</b> 簡介類神經網絡</a></li>
+<li class="chapter" data-level="4.6" data-path="方法.html"><a href="方法.html#長短期記憶網絡"><i class="fa fa-check"></i><b>4.6</b> 長短期記憶網絡</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="方法.html"><a href="方法.html#長短期記憶網絡的參數設定"><i class="fa fa-check"></i><b>4.6.1</b> 長短期記憶網絡的參數設定</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="方法.html"><a href="方法.html#時序卷積網絡"><i class="fa fa-check"></i><b>4.7</b> 時序卷積網絡</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="方法.html"><a href="方法.html#時序卷積網絡與季節性自迴歸"><i class="fa fa-check"></i><b>4.7.1</b> 時序卷積網絡與季節性自迴歸</a></li>
+<li class="chapter" data-level="4.7.2" data-path="方法.html"><a href="方法.html#時序卷積網絡的參數設定"><i class="fa fa-check"></i><b>4.7.2</b> 時序卷積網絡的參數設定</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="預測結果比較.html"><a href="預測結果比較.html"><i class="fa fa-check"></i><b>5</b> 預測結果比較</a><ul>
+<li class="chapter" data-level="5.1" data-path="預測結果比較.html"><a href="預測結果比較.html#比較具結構斷裂的季節性差分整合移動平均自迴歸模型類神經網絡的樣本外預測的均方根誤差"><i class="fa fa-check"></i><b>5.1</b> 比較具結構斷裂的季節性差分整合移動平均自迴歸模型、類神經網絡的樣本外預測的均方根誤差</a></li>
+<li class="chapter" data-level="5.2" data-path="預測結果比較.html"><a href="預測結果比較.html#類神經網絡的訓練狀況"><i class="fa fa-check"></i><b>5.2</b> 類神經網絡的訓練狀況</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="結論.html"><a href="結論.html"><i class="fa fa-check"></i><b>6</b> 結論</a><ul>
+<li class="chapter" data-level="6.1" data-path="結論.html"><a href="結論.html#如何改進類神經網絡"><i class="fa fa-check"></i><b>6.1</b> 如何改進類神經網絡</a></li>
+</ul></li>
+<li class="appendix"><span><b>附錄</b></span></li>
+<li class="chapter" data-level="A" data-path="latex-cite-pkg.html"><a href="latex-cite-pkg.html"><i class="fa fa-check"></i><b>A</b> LaTeX 文獻引用</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>參考資料</a></li>
+<li class="divider"></li>
+<li><a href="https://liao961120.github.io/ntuthesis" target="blank"><i class="fas fa-home"></i> &nbsp;套件網站</a></li>
+<li><a href="https://github.com/liao961120/ntuthesis" target="blank"><i class="fab fa-github"></i> &nbsp; GitHub</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">臺大論文模板</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="文獻回顧" class="section level1">
+<h1><span class="header-section-number">第 2 章</span> 文獻回顧</h1>
+<p>預測是希望能預見未來，是為了可以未雨綢繆，提早安排。但預測並不是直接看到未來的水晶球，而是透過過去的狀況來推估未來的變化。預測可以分為兩種，分別是對當下經濟狀況的預測(nowcasting)與對未來經濟狀況的預測(forecast)。在 <span class="citation">Montgomery et al. (<a href="#ref-montgomeryForecastingUnemploymentRate1998" role="doc-biblioref">1998</a>)</span> 文章中指出，因為是藉由觀察資料來形成預測，因此預測可視為給定條件機率分配的估計問題。是一個把較複雜的資料生成步驟(data generating process)簡化，同時在可接受、可預期的損失和風險內，選擇能降低其損失值的參數模型。預測模型是藉由擷取資料的特徵並篩選掉資料中的噪音<span class="citation">(Zhu &amp; Wu, <a href="#ref-zhuClassNoiseVs2004" role="doc-biblioref">2004</a>)</span>，來找出最合適的參數設定。 <span class="citation">Elliott &amp; Timmermann (<a href="#ref-elliottEconomicForecasting2008" role="doc-biblioref">2008</a>)</span> 也提到預測模型最好看成是一種近似或是追蹤的裝置，所以不應該期待預測模型會在不同時間下都表現良好。因此，預測其實是種估計，透過不同模型裡頭的參數，去描繪過去的狀況，推估未來的情形，但沒有一個模型是完美的，因為總有些參數是被隱藏著，等到事情發生時才會顯現，因此沒有永遠最好的模型。</p>
+<p>總體經濟的預測，根據 <span class="citation">Diebold (<a href="#ref-dieboldPresentFutureMacroeconomic1998" role="doc-biblioref">1998</a>)</span> 可分為結構性與非結構性。結構性指的是藉由建立理論模型，並據此對實際資料進行預測，像是動態隨機一般均衡模型(Dynamic stochastic general equilibrium)；而非結構性模型，則是對資料本身建立相對應的模型，進行後續資料的預測，像是向量自迴歸模型(Vector autoregression)。此外，非結構性模型較適合無條件的預測，不適合有條件的預測 <span class="citation">Lucas (<a href="#ref-lucasEconometricPolicyEvaluation1976" role="doc-biblioref">1976</a>)</span> 。本研究提及的方法，皆屬於非結構性模型。 <span class="citation">Hall &amp; Cook (<a href="#ref-hallMacroeconomicIndicatorForecasting2017" role="doc-biblioref">2017</a>)</span> 提及目前的總體指標預測多半是以線性模型為主，像是向量自迴歸模型(Vector autoregression)與差分整合移動平均自迴歸模型(Autoregressive Integrated Moving Average,ARIMA)，差分整合移動平均自迴歸模型屬於非結構性模型，雖然對於模型資料生成假設較少，但差分整合移動平均自迴歸模型對於模型設定相對敏感，像是要加入多少個落後項。在本研究中會運用到的線性模型為季節差分整合移動平均自迴歸模型(Seasonal Autoregressive Integrated Moving Average, SARIMA)，亦需要自行設定落後期數。</p>
+<p>總體經濟狀況產生變化，當然也會反映在勞動市場上，我們從失業率的變化就可看出端倪。失業對個人或其家庭都是十分痛苦的一件事情，因此經濟學關於失業率的探討的面向十分廣泛， <span class="citation">Layard, Nickell, &amp; Jackman (<a href="#ref-layardUnemploymentMacroeconomicPerformance1991" role="doc-biblioref">1991</a>)</span> 提及像是失業的成因、政策上可以如何改善降低失業率、國與國之間失業率的比較和失業率等。關於失業率的預測有 <span class="citation">Montgomery et al. (<a href="#ref-montgomeryForecastingUnemploymentRate1998" role="doc-biblioref">1998</a>)</span> 提到失業率在景氣擴張期與收縮期時，不同時期不同預測方法的表現不同； <span class="citation">Dritsaki (<a href="#ref-dritsakiForecastSarimaModels2016" role="doc-biblioref">2016</a>)</span> 是用季節差分整合移動平均自迴歸模型來預測希臘的失業率，但沒有做結構性改變的設定。</p>
+<p>此外， <span class="citation">Coulombe, Leroux, Stevanovic, &amp; Surprenant (<a href="#ref-coulombeHowMachineLearning2020" role="doc-biblioref">2020</a>)</span> 因為總體資料存在不確定性與金融摩擦， <span class="citation">Elliott &amp; Timmermann (<a href="#ref-elliottEconomicForecasting2008" role="doc-biblioref">2008</a>)</span> 提到建立模型時常發現時間序列資料是非定態的，類神經網絡的特點–非線性方式，特別是在做長期數的預測時，容易抓到這些特徵。 <span class="citation">Coulombe et al. (<a href="#ref-coulombeHowMachineLearning2020" role="doc-biblioref">2020</a>)</span> 儘管類神經網絡在總體經濟的運用已有一段歷史( <span class="citation">Kuan &amp; White (<a href="#ref-kuanArtificialNeuralNetworks1994" role="doc-biblioref">1994</a>)</span> , <span class="citation">Swanson &amp; White (<a href="#ref-swansonModelSelectionApproach1997" role="doc-biblioref">1997</a>)</span> , <span class="citation">Stock &amp; Watson (<a href="#ref-stockCointegrationCausalityForecasting1999" role="doc-biblioref">1999</a>)</span> )，但預測相關的文獻是最近隨著類神經網絡的演進而有大幅度的成長。 雖然 <span class="citation">Coulombe et al. (<a href="#ref-coulombeHowMachineLearning2020" role="doc-biblioref">2020</a>)</span> 提到在資料較少的模型中，非線性沒辦法顯著提升預測能力。</p>
+<p>本研究會用到的類神經網絡有長短期記憶網絡及時序卷積網絡。 <span class="citation">Hochreiter &amp; Schmidhuber (<a href="#ref-hochreiterLongShortTermMemory1997" role="doc-biblioref">1997</a>)</span> 提出的<strong>長短期記憶網絡</strong>，屬於循環神經網絡(Recurrent Neural Network, RNN)的一種，循環神經網絡具有記憶時間順序的功能，因此常被用來處理序列資料，如翻譯或語音處理等。此外， <span class="citation">Bai, Kolter, &amp; Koltun (<a href="#ref-baiEmpiricalEvaluationGeneric2018" role="doc-biblioref">2018</a>)</span> 彙整( <span class="citation">Oord et al. (<a href="#ref-oordWaveNetGenerativeModel2016" role="doc-biblioref">2016</a>)</span> , <span class="citation">Dauphin, Fan, Auli, &amp; Grangier (<a href="#ref-dauphinLanguageModelingGated2017" role="doc-biblioref">2017</a>)</span>)並藉由以下特徵的第1點，精簡出另一個處理時間序列資料的類神經網絡架構–時序卷積網絡(Temporal Convolutional Networks, TCN)，此架構下具備的特徵有</p>
+<ul>
+<li>1.卷積具有因果關係</li>
+<li>2.可採用任意長度的序列資料，並能輸出出相同長度的序列，如同循環神經網絡一般。因而改善了卷積神經網絡對序列資料的處理。</li>
+</ul>
+<p>在台灣失業率資料裡，可以看到不同時段間有長時間大幅度的變化，表示不同時段間可能有 <span class="citation">Boot &amp; Pick (<a href="#ref-bootDoesModelingStructural2020" role="doc-biblioref">2020</a>)</span> 提及的結構性變化。 <span class="citation">Boot &amp; Pick (<a href="#ref-bootDoesModelingStructural2020" role="doc-biblioref">2020</a>)</span> 有相當程度的結構性改變，在預測時將結構改變納入考量可以增進預測的能力，即便僅有2到3個結構改變點。因此在後續模型的處理上，都有考量結構性改變的處理，以改善模型預測上的能力。</p>
+</div>
+<h3>參考資料</h3>
+<div id="refs" class="references">
+<div id="ref-baiEmpiricalEvaluationGeneric2018">
+<p>Bai, S., Kolter, J. Z., &amp; Koltun, V. (2018). An empirical evaluation of generic convolutional and recurrent networks for sequence modeling. <em>arXiv Preprint arXiv:1803.01271</em>.</p>
+</div>
+<div id="ref-bootDoesModelingStructural2020">
+<p>Boot, T., &amp; Pick, A. (2020). Does modeling a structural break improve forecast accuracy? <em>Journal of Econometrics</em>, <em>215</em>(1), 35–59.</p>
+</div>
+<div id="ref-coulombeHowMachineLearning2020">
+<p>Coulombe, P. G., Leroux, M., Stevanovic, D., &amp; Surprenant, S. (2020). How is Machine Learning Useful for Macroeconomic Forecasting?</p>
+</div>
+<div id="ref-dauphinLanguageModelingGated2017">
+<p>Dauphin, Y. N., Fan, A., Auli, M., &amp; Grangier, D. (2017). Language Modeling with Gated Convolutional Networks. <em>arXiv:1612.08083 [Cs]</em>.</p>
+</div>
+<div id="ref-dieboldPresentFutureMacroeconomic1998">
+<p>Diebold, F. X. (1998). The Past, Present, and Future of Macroeconomic Forecasting. <em>Journal of Economic Perspectives</em>, <em>12</em>(2), 175–192. <a href="https://doi.org/10.1257/jep.12.2.175">https://doi.org/10.1257/jep.12.2.175</a></p>
+</div>
+<div id="ref-dritsakiForecastSarimaModels2016">
+<p>Dritsaki, C. (2016). Forecast of Sarima Models: Αn Application to Unemployment Rates of Greece. <em>American Journal of Applied Mathematics and Statistics</em>, <em>4</em>(5), 136–148.</p>
+</div>
+<div id="ref-elliottEconomicForecasting2008">
+<p>Elliott, G., &amp; Timmermann, A. (2008). Economic Forecasting. <em>Journal of Economic Literature</em>, <em>46</em>(1), 3–56.</p>
+</div>
+<div id="ref-hallMacroeconomicIndicatorForecasting2017">
+<p>Hall, A. S., &amp; Cook, T. R. (2017). <em>Macroeconomic Indicator Forecasting with Deep Neural Networks</em>. Federal Reserve Bank of Kansas City.</p>
+</div>
+<div id="ref-hochreiterLongShortTermMemory1997">
+<p>Hochreiter, S., &amp; Schmidhuber, J. (1997). Long Short-Term Memory. <em>Neural Computation</em>, <em>9</em>(8), 1735–1780. <a href="https://doi.org/10.1162/neco.1997.9.8.1735">https://doi.org/10.1162/neco.1997.9.8.1735</a></p>
+</div>
+<div id="ref-kuanArtificialNeuralNetworks1994">
+<p>Kuan, C.-M., &amp; White, H. (1994). Artificial neural networks: An econometric perspective. <em>Econometric Reviews</em>, <em>13</em>(1), 1–91. <a href="https://doi.org/10.1080/07474939408800273">https://doi.org/10.1080/07474939408800273</a></p>
+</div>
+<div id="ref-layardUnemploymentMacroeconomicPerformance1991">
+<p>Layard, R., Nickell, S., &amp; Jackman, R. (1991). <em>Unemployment: Macroeconomic Performance and the Labour Market</em>. Oxford University Press.</p>
+</div>
+<div id="ref-lucasEconometricPolicyEvaluation1976">
+<p>Lucas, R. E. (1976). Econometric policy evaluation: A critique. <em>Carnegie-Rochester Conference Series on Public Policy</em>, <em>1</em>, 19–46. <a href="https://doi.org/10.1016/S0167-2231(76)80003-6">https://doi.org/10.1016/S0167-2231(76)80003-6</a></p>
+</div>
+<div id="ref-montgomeryForecastingUnemploymentRate1998">
+<p>Montgomery, A. L., Zarnowitz, V., Tsay, R. S., &amp; Tiao, G. C. (1998). Forecasting the U.S. Unemployment Rate. <em>Journal of the American Statistical Association</em>, <em>93</em>(442), 478–493. <a href="https://doi.org/10.2307/2670094">https://doi.org/10.2307/2670094</a></p>
+</div>
+<div id="ref-oordWaveNetGenerativeModel2016">
+<p>Oord, A. van den, Dieleman, S., Zen, H., Simonyan, K., Vinyals, O., Graves, A., … Kavukcuoglu, K. (2016). WaveNet: A Generative Model for Raw Audio. <em>arXiv:1609.03499 [Cs]</em>.</p>
+</div>
+<div id="ref-stockCointegrationCausalityForecasting1999">
+<p>Stock, J., &amp; Watson, M. (1999). <em>Cointegration, Causality and Forecasting: A Festschrift for Clive W.J. Granger</em>. Oxford: Oxford University Press.</p>
+</div>
+<div id="ref-swansonModelSelectionApproach1997">
+<p>Swanson, N., &amp; White, H. (1997). A Model Selection Approach To Real-Time Macroeconomic Forecasting Using Linear Models And Artificial Neural Networks. <em>The Review of Economics and Statistics</em>, <em>79</em>(4), 540–550.</p>
+</div>
+<div id="ref-zhuClassNoiseVs2004">
+<p>Zhu, X., &amp; Wu, X. (2004). Class Noise vs. Attribute Noise: A Quantitative Study. <em>Artificial Intelligence Review</em>. <a href="https://doi.org/10.1007/s10462-004-0751-8">https://doi.org/10.1007/s10462-004-0751-8</a></p>
+</div>
+</div>
+<br><br>
+<div id="disqus_thread"></div>
+<script>
+
+//var disqus_config = function () { 
+//  this.language = "zh-Hant";
+//};
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="研究動機.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="資料與方法.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/liao961120/ntuthesis/edit/master/example-thesis/01-install-compile.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ntu-bookdown.pdf"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

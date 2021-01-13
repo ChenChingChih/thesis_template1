@@ -1,0 +1,21 @@
+
+Title:
+ White Neural Network Test
+
+Test Results:
+  PARAMETER:
+    lag: 1
+    q: 10
+    range: 4
+    qstar|df: 2
+    t-lag-qstar|df: 501
+  STATISTIC:
+    Chi-squared: 5.5432
+    F: 2.7703
+  P VALUE:
+    Chi-squared: 0.06256 
+    F: 0.0636 
+
+Description:
+ Thu Oct 22 14:17:24 2020 by user: ChingChih
+

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>第 4 章 方法 | 臺大論文模板</title>
+  <meta name="description" content="第 4 章 方法 | 臺大論文模板" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="第 4 章 方法 | 臺大論文模板" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="liao961120/ntuthesis" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="第 4 章 方法 | 臺大論文模板" />
+  
+  
+  
+
+<meta name="author" content="廖永賦" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="資料與方法.html"/>
+<link rel="next" href="預測結果比較.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script>
+// Add target_blank to external link
+// See article-header.html for auto adding ID to h1,h2,h3
+$(document).ready(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">NTU Thesis</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>關於</a></li>
+<li class="chapter" data-level="1" data-path="研究動機.html"><a href="研究動機.html"><i class="fa fa-check"></i><b>1</b> 研究動機</a></li>
+<li class="chapter" data-level="2" data-path="文獻回顧.html"><a href="文獻回顧.html"><i class="fa fa-check"></i><b>2</b> 文獻回顧</a></li>
+<li class="chapter" data-level="3" data-path="資料與方法.html"><a href="資料與方法.html"><i class="fa fa-check"></i><b>3</b> 資料與方法</a><ul>
+<li class="chapter" data-level="3.1" data-path="資料與方法.html"><a href="資料與方法.html#資料"><i class="fa fa-check"></i><b>3.1</b> 資料</a></li>
+<li class="chapter" data-level="3.2" data-path="資料與方法.html"><a href="資料與方法.html#台灣失業率趨勢圖"><i class="fa fa-check"></i><b>3.2</b> 台灣失業率趨勢圖</a></li>
+<li class="chapter" data-level="3.3" data-path="資料與方法.html"><a href="資料與方法.html#類神經網絡的資料標準化"><i class="fa fa-check"></i><b>3.3</b> 類神經網絡的資料標準化</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="方法.html"><a href="方法.html"><i class="fa fa-check"></i><b>4</b> 方法</a><ul>
+<li class="chapter" data-level="4.1" data-path="方法.html"><a href="方法.html#單根與平穩性檢定"><i class="fa fa-check"></i><b>4.1</b> 單根與平穩性檢定</a></li>
+<li class="chapter" data-level="4.2" data-path="方法.html"><a href="方法.html#以迴歸移除結構性斷裂點的效果"><i class="fa fa-check"></i><b>4.2</b> 以迴歸移除結構性斷裂點的效果</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="方法.html"><a href="方法.html#類神經網絡的方法"><i class="fa fa-check"></i><b>4.2.1</b> 類神經網絡的方法</a></li>
+<li class="chapter" data-level="4.2.2" data-path="方法.html"><a href="方法.html#具結構斷裂的季節性差分整合移動平均自迴歸模型"><i class="fa fa-check"></i><b>4.2.2</b> 具結構斷裂的季節性差分整合移動平均自迴歸模型</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="方法.html"><a href="方法.html#挑選最佳的具結構斷裂的季節性差分整合移動平均自迴歸模型"><i class="fa fa-check"></i><b>4.3</b> 挑選最佳的具結構斷裂的季節性差分整合移動平均自迴歸模型</a></li>
+<li class="chapter" data-level="4.4" data-path="方法.html"><a href="方法.html#檢定殘差是否有非線性"><i class="fa fa-check"></i><b>4.4</b> 檢定殘差是否有非線性</a></li>
+<li class="chapter" data-level="4.5" data-path="方法.html"><a href="方法.html#簡介類神經網絡"><i class="fa fa-check"></i><b>4.5</b> 簡介類神經網絡</a></li>
+<li class="chapter" data-level="4.6" data-path="方法.html"><a href="方法.html#長短期記憶網絡"><i class="fa fa-check"></i><b>4.6</b> 長短期記憶網絡</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="方法.html"><a href="方法.html#長短期記憶網絡的參數設定"><i class="fa fa-check"></i><b>4.6.1</b> 長短期記憶網絡的參數設定</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="方法.html"><a href="方法.html#時序卷積網絡"><i class="fa fa-check"></i><b>4.7</b> 時序卷積網絡</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="方法.html"><a href="方法.html#時序卷積網絡與季節性自迴歸"><i class="fa fa-check"></i><b>4.7.1</b> 時序卷積網絡與季節性自迴歸</a></li>
+<li class="chapter" data-level="4.7.2" data-path="方法.html"><a href="方法.html#時序卷積網絡的參數設定"><i class="fa fa-check"></i><b>4.7.2</b> 時序卷積網絡的參數設定</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="預測結果比較.html"><a href="預測結果比較.html"><i class="fa fa-check"></i><b>5</b> 預測結果比較</a><ul>
+<li class="chapter" data-level="5.1" data-path="預測結果比較.html"><a href="預測結果比較.html#比較具結構斷裂的季節性差分整合移動平均自迴歸模型類神經網絡的樣本外預測的均方根誤差"><i class="fa fa-check"></i><b>5.1</b> 比較具結構斷裂的季節性差分整合移動平均自迴歸模型、類神經網絡的樣本外預測的均方根誤差</a></li>
+<li class="chapter" data-level="5.2" data-path="預測結果比較.html"><a href="預測結果比較.html#類神經網絡的訓練狀況"><i class="fa fa-check"></i><b>5.2</b> 類神經網絡的訓練狀況</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="結論.html"><a href="結論.html"><i class="fa fa-check"></i><b>6</b> 結論</a><ul>
+<li class="chapter" data-level="6.1" data-path="結論.html"><a href="結論.html#如何改進類神經網絡"><i class="fa fa-check"></i><b>6.1</b> 如何改進類神經網絡</a></li>
+</ul></li>
+<li class="appendix"><span><b>附錄</b></span></li>
+<li class="chapter" data-level="A" data-path="latex-cite-pkg.html"><a href="latex-cite-pkg.html"><i class="fa fa-check"></i><b>A</b> LaTeX 文獻引用</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>參考資料</a></li>
+<li class="divider"></li>
+<li><a href="https://liao961120.github.io/ntuthesis" target="blank"><i class="fas fa-home"></i> &nbsp;套件網站</a></li>
+<li><a href="https://github.com/liao961120/ntuthesis" target="blank"><i class="fab fa-github"></i> &nbsp; GitHub</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">臺大論文模板</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="方法" class="section level1">
+<h1><span class="header-section-number">第 4 章</span> 方法</h1>
+<div id="單根與平穩性檢定" class="section level2">
+<h2><span class="header-section-number">4.1</span> 單根與平穩性檢定</h2>
+<p>因失業率為一時間序列，加上先前初步判斷有結構性的改變，本研究先檢定失業率是否具有單根(unit root)與結構性斷裂(structrual break)。
+所謂結構性斷裂是指失業率在不同時段內有著不同的平均值，假設失業率的觀察值為<span class="math inline">\(y_t\)</span>，其中<span class="math inline">\(t=0,1,...T-1\)</span>，
+<span class="math display">\[y_t = u_t + z_t\]</span>
+<span class="math inline">\(u_t\)</span>表示各段時間內失業率的平均值，<span class="math inline">\(z_t\)</span>代表殘差項(誤差項?)<br />
+若在不同區間具有不同的失業率平均值，可表示如下，
+<span class="math display">\[
+ u_t = 
+  \begin{cases} 
+   u_1, &amp; 0 \leq t&lt;t_1 \\
+   u_2, &amp; t_1 \leq t&lt;t_2 \\
+   \vdots \\
+   u_{m+1}, &amp; t_m \leq t&lt;T-1
+  \end{cases}
+\]</span>
+其中<span class="math inline">\(t_1,t_2,...,t_m\)</span>為平均值變動的時間點。</p>
+<p>本研究藉由 <span class="citation">Zivot &amp; Andrews (<a href="#ref-zivotFurtherEvidenceGreat1992" role="doc-biblioref">1992</a>)</span> 的Zivot-Andrews檢定與 <span class="citation">Bai &amp; Perron (<a href="#ref-baiComputationAnalysisMultiple2003" role="doc-biblioref">2003</a>)</span> 的Bai-Perron檢定來做是否具有結構性斷裂的驗證。</p>
+<p>Zivot-Andrews的目標是估計出，在趨勢和平穩(trend-stationary)的對立假設上權重最大的斷裂點。Zivot-Andrews檢定，修改Perron採用ADF單根檢定的策略，將PERRON假定外生的<span class="math inline">\(\lambda\)</span>內生化，並透過<span class="math inline">\(t_{\hat{\alpha^i}}(\lambda)&lt;\kappa_\alpha(\lambda)\)</span>的t檢定來作為判斷的依據，其中<span class="math inline">\(\kappa_\alpha(\lambda)\)</span>表示在固定的<span class="math inline">\(\lambda=T_B/T\)</span>下的漸進分配。</p>
+<p>Zivot-Andrews檢定的虛無假設為，</p>
+<p><span class="math display">\[y_t = \mu+y_{t-1}+e_t\]</span></p>
+<p>對立假設有三種，分別是具有一個均值的結構改變，</p>
+<p><span class="math display">\[y_t=\hat{\mu^A}+\hat{\theta^A}DU_t(\hat{\lambda})+\hat{\beta^A}t+\hat{\alpha^A}y_{t-1}+\sum\limits^k_{j=1}\hat{c_j^A}\delta y_{t-j}+\hat{e_t}\]</span></p>
+<p>具有斜率趨勢改變，</p>
+<p><span class="math display">\[y_t=\hat{\mu^B}+\hat{\beta^B}t+\hat{\gamma^B}DT^*_t(\hat{\lambda})+\hat{\beta^B}t+\hat{\alpha^B}y_{t-1}+\sum\limits^k_{j=1}\hat{c_j^B}\delta y_{t-j}+\hat{e_t}\]</span></p>
+<p>具有結構與趨勢改變，</p>
+<p><span class="math display">\[y_t=\hat{\mu^C}+\hat{\theta^C}DU_t(\hat{\lambda})+\hat{\beta^C}t+\hat{\gamma^C}DT^*_t(\hat{\lambda})+\hat{\alpha^C}y_{t-1}+\sum\limits^k_{j=1}\hat{c_j^C}\delta y_{t-j}+\hat{e_t}\]</span></p>
+<p>其中，<span class="math inline">\(DU_t=1\)</span>如果<span class="math inline">\(t&gt;T\lambda\)</span>，其他狀況<span class="math inline">\(DU_t=0\)</span>表示在可能的結構斷裂時間(<span class="math inline">\(T_B=T\lambda\)</span>)上，均值的移動。<span class="math inline">\(DT^*_t(\hat{\lambda})=t-T\lambda\)</span>如果<span class="math inline">\(t&gt;T\lambda\)</span>，其他況狀則<span class="math inline">\(DT^*_t(\hat{\lambda})=0\)</span>，表示斜率的變動。</p>
+<p>在Zivot-Andrews檢定的統計量為-5.898，小於臨界值<span class="math inline">\(\alpha\)</span>=0.01時的-5.57，因此拒絕H0虛無假設，失業率資料為定態但有結構性斷裂。</p>
+<p>而 <span class="citation">Bai &amp; Perron (<a href="#ref-baiComputationAnalysisMultiple2003" role="doc-biblioref">2003</a>)</span> 提出的Bai-Perron檢定，則是用來檢測是否具有多個結構性斷裂點，相較於Zivot-Andrews檢定，Bai-Perron檢定還可以標定多個結構性斷裂點發生的時間為何。</p>
+<p>假設以下的迴歸式有m個斷裂點(m+1個區間)</p>
+<p><span class="math display">\[y_t=z_t^{&#39;}\delta_j+u_t,t=T_{j-1}+1,...T_j\]</span>
+對<span class="math inline">\(j=1,...,m+1\)</span>此處的<span class="math inline">\(y_t\)</span>表示在t期的被解釋變數、<span class="math inline">\(z_t\)</span>(q*1)為共變量(covariates)、結構改變點<span class="math inline">\((T_1,..,T_m)\)</span>視為未知。目標是要同時估計參數與未知的結構改變點。藉由最小平方法則(least-square principle)對每一個m-分割區間，由以下的式子透過極小化殘差的平方和，估計出相對應的<span class="math inline">\(\delta_j\)</span>，</p>
+<p><span class="math display">\[S_T(T_1,...T_m)=\sum\limits_{i=1}^{m+1}\sum\limits_{t=T_i+1}^{T_t}[y_t-z_t^{&#39;}\delta_i]^2\]</span></p>
+<p>先估計出最小的<span class="math inline">\((\hat{T_1},...\hat{T_m})\)</span>，</p>
+<p><span class="math display">\[(\hat{T_1},...\hat{T_m}) =\mathop{\arg\min_{T_1,...T_m}} S_T(T_1,...T_m)\]</span></p>
+<p>再將估計出的<span class="math inline">\((\hat{T_1},...\hat{T_m})\)</span>代回前式中，估計出<span class="math inline">\(\hat{\delta}=\hat{\delta}(\hat{T_1},...\hat{T_m})\)</span>與<span class="math inline">\(\hat{\beta}=\hat{\beta}(\hat{T_1},...\hat{T_m})\)</span>，最終則是在給定的斷裂點數<span class="math inline">\(m\)</span>下，藉由動態規劃 (Dynamic programming)的方法找出殘差均方和(Residual sum of sqaure)最小的線性組合，則為該斷裂數下最佳解。接著再以supF type test 來檢定0,l個斷裂點與l,l+1個斷裂點直到m個斷裂點下，檢視模型選擇準則BIC直最小的斷裂點數，即為Bai-Perron檢定最適的結構斷裂點數。</p>
+<p>模型選擇標準BIC，選取BIC值最小者為最適合的模型，</p>
+<p><span class="math display">\[BIC = k\ln(n)-2\ln(\hat L)\]</span></p>
+<p>其中k為模型參數個數、n為樣本數大小、<span class="math inline">\(\hat L\)</span>為最大概似函數值。<br />
+藉由R的urca套件內的breakpoints函數<span class="citation">(Zeileis, Kleiber, Krämer, &amp; Hornik, <a href="#ref-zeileisTestingDatingStructural2003" role="doc-biblioref">2003</a>)</span>，由表<a href="方法.html#tab:BP">4.1</a> 找出最小的選BIC在4個結構性斷裂處，因此失業率資料考量4個結構性斷裂點。因此，本研究以加入虛擬變數(dummy variable)來做資料上的處理。</p>
+<table>
+<caption><span id="tab:BP">表 4.1: </span>Bai-Perron檢定</caption>
+<thead>
+<tr class="header">
+<th align="left">結構變化的個數</th>
+<th align="left">結構變化時點</th>
+<th align="right">BIC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">2000(9)</td>
+<td align="right">1013</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">1994(11) 2001(2)</td>
+<td align="right">948</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">1995(1) 2001(4) 2011(11)</td>
+<td align="right">872</td>
+</tr>
+<tr class="even">
+<td align="left">4*</td>
+<td align="left">1987(12) 1995(1) 2001(4) 2011(11)</td>
+<td align="right">846</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">1987(12) 1994(12) 2001(3) 2007(6) 2013(9)</td>
+<td align="right">861</td>
+</tr>
+</tbody>
+</table>
+<p>從表<a href="方法.html#tab:BP">4.1</a>可得知，1978年1月至2019年12月存在4個結構性斷裂點，分別為1987年12月、1995年1月、2001年4月 與2011年11月，從圖<a href="資料與方法.html#fig:unemm">3.1</a>回顧這段時間的歷史，在這些結構性斷裂點的前後，藉由國家發展委員會的歷次景氣循環認定工作<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>，可以略知這段期間所發生的一些事件。在1979年，第二次石油危機，1980年代後期，台灣經濟高速發展，國際熱錢流入，外匯儲備上升到1987年的768億美元，促使金融自由化，像是財政部並於1990年4月發布「商業銀行設立標準」，接受新銀行設立申請，此時正是台灣錢淹腳目的時代，失業率降至此區間的低點。1997年7月開始的亞洲金融風暴。2001年3月開始的網路泡沫破滅，再加上2001年9月的911事件，使得失業率有大幅度的躍升。2008年下半年，美國次級房貸引發金融海嘯，導致失業率急遽升高。2010年年初，則發生歐洲主權債務危機。</p>
+</div>
+<div id="以迴歸移除結構性斷裂點的效果" class="section level2">
+<h2><span class="header-section-number">4.2</span> 以迴歸移除結構性斷裂點的效果</h2>
+<div id="類神經網絡的方法" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> 類神經網絡的方法</h3>
+<p>將失業率<span class="math inline">\(y_t\)</span>對截距項與4個虛擬變數同時跑迴歸，</p>
+<p><span class="math display" id="eq:zt">\[\begin{equation} 
+  y_t = \beta_0+ \beta_1D_{1t}+\beta_2D_{2t}+\beta_3D_{3t}+\beta_4D_{4t}+z_t
+  \tag{4.1}
+\end{equation}\]</span>
+其中，<span class="math inline">\(T\)</span>為2019年12月的時點，<span class="math inline">\(D_1 = [D_{11},..D_{1t}...D_{1T}]^{&#39;}\)</span>在1988年9月至1995年1月間為1其餘為0的向量、<span class="math inline">\(D_2\)</span>為在1995年2月至2001年4月間為1其餘為0的向量、<span class="math inline">\(D_3\)</span>為在2001年5月至2011年11月間為1其餘為0的向量、<span class="math inline">\(D_4\)</span>為2011年12月至2019年112月間為1其餘為0的向量、<span class="math inline">\(z_t\)</span>為殘差項(residuals)。接著取出殘差項<span class="math inline">\(z_t\)</span>，以此做為下來預測誤差的真實值，與之後估計出 <span class="math inline">\(\hat{\epsilon}\)</span> 的差值 <span class="math inline">\(|z_t-\hat{\epsilon}|\)</span> 作為預測的誤差。</p>
+</div>
+<div id="具結構斷裂的季節性差分整合移動平均自迴歸模型" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> 具結構斷裂的季節性差分整合移動平均自迴歸模型</h3>
+<p>具結構斷裂的季節性差分整合移動平均自迴歸模型(SARIMAX)模型為季節性差分整合移動平均自迴歸模型(seasonal autoregressive integrated moving average, SARIMA)同時加上虛擬變數的模型，
+將失業率<span class="math inline">\(y_t\)</span>對截距項與4個虛擬變數與SARIMA<strong>同時</strong>跑迴歸，
+根據 <span class="citation">US Census Bureau (<a href="#ref-uscensusbureauX13ARIMASEATSSeasonalAdjustment2017" role="doc-biblioref">2017</a>)</span> 寫成時變均值(time-varying mean)函數，</p>
+<p><span class="math display">\[\Phi_P(B^s)\phi_p(B)(1-B)^d(1-B^s)^D (y_t-\sum_i \beta_ix_{it}) = \theta_q(B)\Theta_Q(B^s)\varepsilon_t\]</span></p>
+<p>符號表示同上述類神經網絡的方法。</p>
+<p>而SARIMA模型，Box-Jenkins SARIMA模型，以落後項(lag)表示模型為</p>
+<p><span class="math display">\[\Phi_P(B^s)\phi_p(B)(1-B)^d(1-B^s)^D z_t = \theta_q(B)\Theta_Q(B^s)\varepsilon_t\]</span></p>
+<p>其中，B是落後運算元，即<span class="math inline">\(Bz_t=z_{t-1}\)</span>；s代表季節周期整數；<span class="math inline">\(\phi_p(.),\theta(.),\Phi_p(.),\Theta(.)\)</span>為落後運算子多項式，
+對p,q<br />
+<span class="math display">\[\phi_p(B) = 1-\phi_1B-\phi_2B^{2}-...-\phi_{p}B^{p}\]</span></p>
+<p><span class="math display">\[\theta_q(L) = 1-\theta_1B-\theta_2B^{2}-...-\theta_qB^{q}\]</span>
+，對季節性P,Q
+<span class="math display">\[\Phi_P(B^s) = 1-\Phi_1B^s-\Phi_2B^s-...-\Phi_{P}B^{Ps}\]</span></p>
+<p><span class="math display">\[\Theta_Q(L) = 1-\Theta_1B^s-\Theta_2B^{2s}-...-\Theta_QB^{Qs}\]</span></p>
+<p>參考 <span class="citation">Wei (<a href="#ref-weiTimeSeriesAnalysis2005" role="doc-biblioref">2005</a>)</span> 表示方式，表示為<span class="math inline">\(ARIMA(p,d,q)(P,D,Q)_s\)</span>。</p>
+</div>
+</div>
+<div id="挑選最佳的具結構斷裂的季節性差分整合移動平均自迴歸模型" class="section level2">
+<h2><span class="header-section-number">4.3</span> 挑選最佳的具結構斷裂的季節性差分整合移動平均自迴歸模型</h2>
+<p>上述提及具結構斷裂的季節性差分整合移動平均自迴歸模型的原理，本研究使用 <span class="citation">Hyndman &amp; Khandakar (<a href="#ref-hyndmanAutomaticTimeSeries2008" role="doc-biblioref">2008</a>)</span> 開發的 R套件<code>auto.arima</code>進行模型選擇，其中運用到Hyndman-Khandakar演算法，藉由選模準則AICc(Akaike Information Criterion correction) 挑選出AICc的最小值，以此為迴歸殘差配似最佳的具結構斷裂的季節性差分整合移動平均自迴歸模型模型。AICc是在小樣本下對AIC的修正。
+<span class="math display">\[AIC = -2logL+2m\]</span></p>
+<p>其中m=p+q+P+Q，模型內的參數和，L是最大概似函數。</p>
+<p><span class="math display">\[AICc = AIC+\frac{2k(k+1)}{n-k-1}\]</span></p>
+<p>其中n為樣本數大小，k為參數個數，當n越大時，AICc會趨近於AIC。選出的模型為<span class="math inline">\(ARIMA(2,0,1)(2,0,0)_{12}\)</span>，各參數為</p>
+<table>
+<caption><span id="tab:SARIMAX">表 4.2: </span>SARIMAX的參數</caption>
+<thead>
+<tr class="header">
+<th align="left">參數</th>
+<th align="right">估計值</th>
+<th align="right">標準誤</th>
+<th align="left">AIC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">intercept</td>
+<td align="right">0.81</td>
+<td align="right">0.50</td>
+<td align="left">-330.45</td>
+</tr>
+<tr class="even">
+<td align="left">ar1</td>
+<td align="right">1.89</td>
+<td align="right">0.05</td>
+<td align="left">BIC</td>
+</tr>
+<tr class="odd">
+<td align="left">ar2</td>
+<td align="right">-0.90</td>
+<td align="right">0.04</td>
+<td align="left">-285.78</td>
+</tr>
+<tr class="even">
+<td align="left">ma1</td>
+<td align="right">-0.85</td>
+<td align="right">0.06</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">sar1</td>
+<td align="right">0.37</td>
+<td align="right">0.05</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">sar2</td>
+<td align="right">0.32</td>
+<td align="right">0.05</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">虛擬變數1</td>
+<td align="right">0.66</td>
+<td align="right">0.14</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">虛擬變數2</td>
+<td align="right">-0.46</td>
+<td align="right">0.20</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">虛擬變數3</td>
+<td align="right">-2.29</td>
+<td align="right">0.25</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">虛擬變數4</td>
+<td align="right">-1.48</td>
+<td align="right">0.29</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="檢定殘差是否有非線性" class="section level2">
+<h2><span class="header-section-number">4.4</span> 檢定殘差是否有非線性</h2>
+<p>因本研究運用類神經網絡預測失業率，而類神經屬於非線性模型，本研究先檢定失業率的迴歸，式子<a href="方法.html#eq:zt">(4.1)</a>的殘差<span class="math inline">\(z_t\)</span>是否為非線性，以了解非線性模型是否適用於預測失業率的模型中。本研究透過 <span class="citation">Lee, White, &amp; Granger (<a href="#ref-leeTestingNeglectedNonlinearity1993" role="doc-biblioref">1993</a>)</span> 提出的 White神經網絡檢定(White Neural Network Test)與 <span class="citation">Teräsvirta, Lin, &amp; Granger (<a href="#ref-terasvirtaPowerNeuralNetwork1993" role="doc-biblioref">1993</a>)</span> 提出的Teraesvirta神經網絡檢定(Teraesvirta Neural Network Test)，來了解失業率的迴歸殘差非線性，在當期失業率的迴歸殘差與不同落後期數失業率的迴歸殘差之間的線性與非線性狀況。</p>
+<p><span class="citation">Lee et al. (<a href="#ref-leeTestingNeglectedNonlinearity1993" role="doc-biblioref">1993</a>)</span> 的White神經網絡檢定
+假設在輸入(<span class="math inline">\(\tilde{x^{&#39;}_t}\theta\)</span>)與輸出值(<span class="math inline">\(o\)</span>)之間，含有一層隱藏層。可表示為</p>
+<p><span class="math display">\[o=\tilde{x^{&#39;}_t}\theta+\sum\limits^q_{j=1}\beta_j\psi(\tilde{x^{&#39;}_t}\gamma_j)\]</span></p>
+<p>其檢定的虛無假設為
+資料平均為線性(linearity in “mean”)</p>
+<p><span class="math display">\[H_0=P[E(y_t|X_t)=\tilde{X^{&#39;}_t}\theta^{*}]=1\]</span>
+對某些<span class="math inline">\(\theta^{*}\)</span>。
+再將其套入Lagrange multiplier test後可表示為</p>
+<p><span class="math display">\[H_0^{&#39;}=E(\Psi_t\hat{e}_t)=0\]</span></p>
+<p>，對立假設則為資料平均為非線性。</p>
+<p><span class="math display">\[H_1^{&#39;}=E(\Psi_t\hat{e}_t)\neq0\]</span></p>
+<p>其中<span class="math inline">\(\hat{e}_t=y_t-\tilde{X^{&#39;}_t}\hat{\theta}\)</span>。衍伸的統計量可表示為，</p>
+<p><span class="math display">\[M_n=(n^{-1/2}\sum\limits^n_{t=1}\Psi_t\hat{e}_t)^{&#39;}\hat{W}^{-1}_n(n^{-1/2}\sum\limits^n_{t=1}\Psi_t\hat{e}_t)\]</span>
+其中、<span class="math inline">\(\Psi_t=(\psi (\tilde{X^{&#39;}_t}\Gamma_1)),...,\psi (\tilde{X^{&#39;}_t}\Gamma_q))^{&#39;}\)</span>、<span class="math inline">\(\hat{W}^{-1}_n\)</span>為<span class="math inline">\(W^{*}=var(n^{-1/2}\sum\limits^n_{t=1}\Psi_t\hat{e}_t)\)</span>的一致性估計值。因此可得，在虛無假設下<span class="math inline">\(M_n \to \chi^2(q)\)</span>分配收斂，當<span class="math inline">\(n \to \infty\)</span>。</p>
+<p>在<span class="math inline">\(\alpha=0.05\)</span>下，在落後期數為一期時，p-value為0.0468，拒絕線性假設；而在落後期數為兩期時，p-value0.0168，拒絕失業率為線性模型。</p>
+<p>terasvirtaPowerNeuralNetwork1993 的Teraesvirta神經網絡檢定(Teraesvirta Neural Network Test)</p>
+<p>在<span class="math inline">\(\alpha=0.05\)</span>下，在落後期數為一期時，p-value為0.0513，，雖沒有拒絕線性假設，但已落在拒絕域的邊緣；而在落後期數為兩期時，p-value為0.01093，拒絕失業率為線性模型。
+由White神經網絡檢定與 Teraesvirta神經網絡檢定，可知失業率資料存有非線性關係，因此，本研究後續嘗試以類神經網絡進行預測，查看是否有更好的預測效果、更少的預測誤差。</p>
+</div>
+<div id="簡介類神經網絡" class="section level2">
+<h2><span class="header-section-number">4.5</span> 簡介類神經網絡</h2>
+<p>類神經網絡使預測上以非線性的模型進行預測，經過非線性檢定後具有非線性的迴歸殘差，在神經網絡可能會有較線性模型，也就是先前提及的SARIMAX模型，有更好的預測效果。</p>
+<p>類神經網絡的精神是模仿神經元接受並藉由非線性的活化函數(activation function)來決定訊號的傳遞，激勵函數將線性關係轉為非線性，因為有非線性的轉換，就可以經由隱藏層來表示輸入值與輸出值間的關係，否則若仍為線性的活化函數仍能以無隱藏層的方式表示，如<span class="math inline">\(h(x)=cx\)</span>，則<span class="math inline">\(y(x)=h(h(x))=c^2x\)</span>。透過多個節點以及層級的堆疊，達到學習輸入值(input)與輸出值(output)間的抽象關係。類神經網絡可分為三層，依序分別是輸入層、隱藏層及輸出層。</p>
+<p>其中，類神經網絡的參數藉由反向傳播進行權重的更新，透過計算權重變化如何使輸出值(<span class="math inline">\(\hat{z_t}\)</span>)與真實值(<span class="math inline">\(z_t\)</span>)間的誤差變化縮小。反向誤差讓即便是複雜的神經網絡，也不必直接寫出誤差函數，也可以計算出不同權重變化下的誤差(或稱梯度)變動。</p>
+<p>本研究以兩種類神經網絡與SARIMAX模型作為比較對象，分別是長短期記憶網絡(Long Short Term Memory, LSTM)與時序卷積網絡(Temporal Convolutional Networks, TCN)。本研究假設<span class="math inline">\(\hat{z_t}\)</span>可表示為落後項變數的非線性函數，將神經網絡表示如下數學式，</p>
+<p><span class="math display" id="eq:nn">\[\begin{equation} 
+  \hat{z_t} = f(z_{t-1},...,z_{t-p})
+  \tag{4.2}
+\end{equation}\]</span>
+，其中<span class="math inline">\(f(.)\)</span>為本研究選擇的類神經網絡。</p>
+</div>
+<div id="長短期記憶網絡" class="section level2">
+<h2><span class="header-section-number">4.6</span> 長短期記憶網絡</h2>
+<p>長短期記憶網絡由 <span class="citation">Hochreiter &amp; Schmidhuber (<a href="#ref-hochreiterLongShortTermMemory1997" role="doc-biblioref">1997</a>)</span> 提出，屬於循環神經網絡(Recurrent Neural Network, RNN)的一種，具有記憶時間順序的功能，因此常被用來處理序列資料，如翻譯或語音處理等，本研究的標的失業率也具有時間先後的數列，適合使用長短期記憶網絡來做預測。若將長短期記憶網絡應用在<a href="方法.html#eq:nn">(4.2)</a>上 ，令<span class="math inline">\(x_t=[z_{t-1},...,z_{t-p}]^T\)</span>為第t期的輸入值(input)，則可依長短期記憶網絡文獻(如 <span class="citation">Merity, Keskar, &amp; Socher (<a href="#ref-merityRegularizingOptimizingLSTM2017" role="doc-biblioref">2017</a>)</span> )表示成如下數學式，</p>
+<p><span class="math display" id="eq:InputGate">\[\begin{equation} 
+  i_t = \sigma_g(W^ix_t+U^ih_{t-1}) 
+  \tag{4.3}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:ForgetGate">\[\begin{equation} 
+  f_t = \sigma_g(W^fx_t+U^fh_{t-1})
+  \tag{4.4}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:OutputGate">\[\begin{equation} 
+  o_t = \sigma_g(W^ox_t+U^oh_{t-1})
+  \tag{4.5}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:tildeC">\[\begin{equation} 
+   \tilde{c_t} =\tanh(W^cx_t+U^ch_{t-1})
+  \tag{4.6}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:ct">\[\begin{equation} 
+   c_t = i_t \odot \tilde{c_t}+ f_t \odot c_{t-1}
+  \tag{4.7}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:ht">\[\begin{equation} 
+   h_t = o_t \odot \tanh(c_t)
+  \tag{4.8}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:hatZ">\[\begin{equation} 
+   \hat{z_t} = W^zh_t
+  \tag{4.9}
+\end{equation}\]</span></p>
+<p>其中<span class="math inline">\(h_t\)</span>為當期的隱藏狀態(hidden state)；<span class="math inline">\(c_t\)</span>為記憶單元狀態(memory cell state)；<span class="math inline">\(\hat{z_t}\)</span>為對<span class="math inline">\(z_t\)</span>的預測值。在式子<a href="方法.html#eq:InputGate">(4.3)</a></p>
+<p><a href="方法.html#eq:OutputGate">(4.5)</a>中，<span class="math inline">\(i_t,f_t,o_t\)</span>別代表輸入閥(Input Gate)、遺忘閥(Forget Gate)與輸出閥(Output Gate)。在式子中，<span class="math inline">\([W^i,W^f,W^o,U^i,U^f,U^o]\)</span>為權重矩陣，而<span class="math inline">\(\sigma(.)\)</span>
+為Sigmoid函數，即</p>
+<p><span class="math display">\[
+\sigma(x)=\frac{1}{1+\exp(-x)}
+\]</span></p>
+<p>，<span class="math inline">\(i_t,f_t,o_t\)</span>的值經Sigmoid函數作用後，會落在<span class="math inline">\((0,1)\)</span>之間。候選值<span class="math inline">\(\tilde{c_t}\)</span>是由式子<a href="方法.html#eq:tildeC">(4.6)</a> 來更新，而<span class="math inline">\(\tilde{c_t}\)</span>是先將<span class="math inline">\(x_t, h_{t-1}\)</span>以權重矩陣<span class="math inline">\(W^c,U^c\)</span>進行線性組合後，再放入雙曲正切函數(<span class="math inline">\(\tanh\)</span>)轉換出候選值<span class="math inline">\(\tilde{c_t}\)</span>，其中雙曲正切函為，</p>
+<p><span class="math display">\[\tanh(x) = \frac{\exp(x)-\exp(-x)}{\exp(x)+\exp(-x)}\]</span></p>
+<p>經此轉換後，<span class="math inline">\(\tilde{c_t}\)</span>會落在<span class="math inline">\((-1,1)\)</span>的區間內。式子<a href="方法.html#eq:ct">(4.7)</a> 是將<span class="math inline">\(\tilde{c_t}\)</span>通過輸入閥<span class="math inline">\(i_t\)</span>後的值，與前一期的記憶單元狀態<span class="math inline">\(c_{t-1}\)</span>經過遺忘閥留下的值，兩者加總後會被保留在當期的記憶單元狀態中。此處的<span class="math inline">\(\odot\)</span>代表兩個向量間逐個元素(element-by-element)相乘。式子<a href="方法.html#eq:OutputGate">(4.5)</a> 顯示當期的記憶單元狀在<span class="math inline">\(\tanh\)</span>轉換後，再經過輸出閥<span class="math inline">\(o_t\)</span>後的當期的隱藏狀態。最後，從式子<a href="方法.html#eq:hatZ">(4.9)</a> 中，我們可以得到經過由當期的隱藏狀態，經過權重矩陣<span class="math inline">\(W^z\)</span>進行線性組合後，得到的<span class="math inline">\(z_t\)</span>的預測值<span class="math inline">\(\hat{z_t}\)</span>。</p>
+<div id="長短期記憶網絡的參數設定" class="section level3">
+<h3><span class="header-section-number">4.6.1</span> 長短期記憶網絡的參數設定</h3>
+<p>長短期記憶網絡的輸入值為當期失業率與前<span class="math inline">\(T\)</span>期的落後項，預測的比對值也就是預測的真實值為h期後的失業率。以函數表示如下，</p>
+<p><span class="math display">\[
+\hat{y_{t+h}} = f(y_t, y_{t-1}, ..., y_{t-T})
+\]</span></p>
+<p>因此長短期記憶網絡的目標是降低預測的比對值<span class="math inline">\(\hat{y_{t+h}}\)</span>與真實值為h期後的失業率<span class="math inline">\(y_{t+h}\)</span>兩者間的誤差。此長短期記憶網絡共使用了266個參數來做估計。</p>
+<p>長短期記憶網絡的優點有，可將記憶分為長短期儲存，是種經過改良後的循環神經網絡模型，優於簡單的循環神經網絡模型，不會因為梯度的爆炸或是消失，導致訓練上的問題。但長短期記憶網絡的缺點是，模型訓練時間較長、較易過度擬合(overfitting)，因此本研究使用 <span class="citation">Merity et al. (<a href="#ref-merityRegularizingOptimizingLSTM2017" role="doc-biblioref">2017</a>)</span> 的非同步隨機梯度下降的權重捨棄的長短期記憶網絡(Asynchronous Stochastic Gradient Descent Weight-Dropped LSTM, AWD-LSTM)來處理過度擬合的問題。本研究採用單層的非同步隨機梯度下降的權重捨棄的長短期記憶網絡，因為在訓練的結果上單雙層預測的差異不大，避免層數多、參數多而造成過度擬合的狀況，同時節省訓練的時間。</p>
+<p>在非同步隨機梯度下降的權重捨棄的長短期記憶網絡(AWD-LSTM))中，共有4個調整過度擬合的參數設定，分別是權重捨棄(Weight Dropouted)、變分丟棄法(Variational Dropout)、激活正規化(activation regularisation)、暫時激活正規化(temporal activation regularisation)，後兩者屬於<span class="math inline">\(L_2\)</span>範數(norm)。因為循環網絡上運用丟棄法(drop out) 需特別注意，不能隨機丟棄每個時點的隱藏狀態，因為會損害循環網絡在時間順序上。</p>
+<p>見圖<a href="方法.html#fig:LSTMmodel">4.1</a>所示，權重捨棄使用的是捨棄連結(DropConnect)的方式，捨棄連結將輸入進模型中，隨機選擇子集的權重調整為；變分丟棄法，是根據貝氏學習理論(Bayesian learning)的方式，對參數<span class="math inline">\(\theta\)</span>的抽樣，而每次抽樣到的參數在同一個訓練回合中都保持固定，以固定遮罩的方式維持每次訓練中參數的一致，應用上是將丟棄隱藏層(dropout hidden)分別用在長短期記憶網絡層與層之間和最後的輸出值<span class="math inline">\(z_t\)</span>上，因本研究僅使用單層的長短期記憶網絡，因此僅至於輸出層前；激活正規化是對顯著大於0的激活進行懲罰、暫時激活正規化則是避免最後兩層的隱藏層差太多，兩者都僅使用在最後一個長短期記憶網絡上與輸出層上，因本研究為單層的長短期記憶網絡，所以只設置於隱藏層<span class="math inline">\(h_t\)</span>與輸出層<span class="math inline">\(z_t\)</span>之間。</p>
+<div class="figure" style="text-align: center"><span id="fig:LSTMmodel"></span>
+<img src="fig/LSTM_model.JPG" alt="AWDLSTM示意圖" width=".6\linewidth" />
+<p class="caption">
+圖 4.1: AWDLSTM示意圖
+</p>
+</div>
+<p>爾後，在落後12,13,14,15,16期、LSTM為1,2層、隱藏層節點為4,6,8、權重捨棄在0.1,0.3、變分丟棄法為0.2,0.4、激活正規化在1.0,1.5,2.0、暫時激活正規化在1.0,1.5,2.0下，挑選出驗證集中均方根誤差最小者為最適參數，每種參數組合跑10次，每次訓練1000回，再從10次間挑選出其中位數代表該種組合的表現。最後挑選出的是落後12期、LSTM為1層、隱藏層節點為4、權重捨棄0.3、激活正規化1.5、暫時激活正規化1.50，作為預測用的非同步隨機梯度下降的權重捨棄的長短期記憶網絡(AWD-LSTM))，共使用266個參數。</p>
+</div>
+</div>
+<div id="時序卷積網絡" class="section level2">
+<h2><span class="header-section-number">4.7</span> 時序卷積網絡</h2>
+<p>以 <span class="citation">Bai et al. (<a href="#ref-baiEmpiricalEvaluationGeneric2018" role="doc-biblioref">2018</a>)</span> 彙整出的時序卷積網絡(Temporal Convolutional Networks, TCN)，讓卷積神經網絡(Convolutional Neural Network, CNN)也能在時間序列的處理上有好的表現。卷積神經網絡是將各個資料經過卷積，卷積可視為加權後，作為神經網絡的輸入值，並經多次堆疊而成的神經網絡。因此，代表卷積神經網絡不是以單點為輸入，而是以一群被卷積的資料為輸入值，這可以加大網絡對於資料區塊上的認識。</p>
+<p>時序卷積網絡改善了卷積神經網絡對序列資料的處理，時序卷積網絡主要是建立在兩個概念上，分別是一維的全連接層（Fully Convolution Network）與因果卷積層（Causal Network）。一維的全連接層使時序卷積網絡將自動補零(padding)，使得經過卷積後仍會維持相同的長度。若不補零，則會退化為 <span class="citation">Waibel, Hanazawa, Hinton, Shikano, &amp; Lang (<a href="#ref-waibelPhonemeRecognitionUsing1989" role="doc-biblioref">1989</a>)</span> 提出的模型，此退化模型不利於多個卷積層堆疊，容易過度擬和。而改進後有補零的模型，因為卷積核不會受到被卷積個數長度的影響，更適合做多層卷積的疊加。再者，因果卷積層的設置，確保未來的資訊不會逆流到過去，確保每個時點卷積的輸出值，不會使用到未來的資訊，如<a href="方法.html#fig:causal">4.2</a>摘自 <span class="citation">Bai et al. (<a href="#ref-baiEmpiricalEvaluationGeneric2018" role="doc-biblioref">2018</a>)</span> 的文章。</p>
+<div class="figure" style="text-align: center"><span id="fig:causal"></span>
+<img src="fig/acausal.PNG" alt="因果關係" width=".5\linewidth" /><img src="fig/causal.PNG" alt="因果關係" width=".5\linewidth" />
+<p class="caption">
+圖 4.2: 因果關係
+</p>
+</div>
+<p>以數學式表示，假設<span class="math inline">\(x=\{x_0,x_1,...x_{T-1}\}\)</span>為一T期的時間序列，<span class="math inline">\(\omega = \{\omega_0,\omega_1,..,\omega_{k-1}\}\)</span>為大小等於k的一維卷積核(kernel)，且<span class="math inline">\(k&lt;T\)</span>。使用卷積核<span class="math inline">\(\omega\)</span>對<span class="math inline">\(x\)</span>序列做卷積，可得數列<span class="math inline">\(\{\Omega(t)\}_{t=0}^{T-1}\)</span>，定義為
+<span class="math display" id="eq:tcn">\[\begin{equation} 
+   \Omega(t) = \omega_0x_t+\omega_1x_{t-1}+\omega_1x_{t-2}+...+\omega_{k-1}x_{t-(k-1)}
+  \tag{4.10}
+\end{equation}\]</span></p>
+<p>，在<span class="math inline">\(t=0\)</span>時，<span class="math inline">\(x_0\)</span>之前的變數均設為0，即
+<span class="math display" id="eq:padding">\[\begin{equation} 
+   x_{-1}=x_{-2}=...=x_{-(k-1)}=0
+  \tag{4.11}
+\end{equation}\]</span></p>
+<p>此外，為了擴大卷積層有效的感受域(respective field)，時序卷積網絡會使用的是膨脹卷積(dilated convolution)，放大被卷積元素之間的距離，形成 <span class="citation">Oord et al. (<a href="#ref-oordWaveNetGenerativeModel2016" role="doc-biblioref">2016</a>)</span> 提出的具因果關係的膨脹卷積。此時，式子<a href="方法.html#eq:tcn">(4.10)</a>要修改為，</p>
+<p><span class="math display" id="eq:tcnd">\[\begin{equation} 
+   \Omega_d(t) = \omega_0x_t+\omega_1x_{t-d}+\omega_1x_{t-2d}+...+\omega_{k-1}x_{t-(k-1)d}
+  \tag{4.12}
+\end{equation}\]</span></p>
+<p>其中，整數d為膨脹因子(dilation factor)，而相對的式子<a href="方法.html#eq:tcn">(4.10)</a>也要改為，
+<span class="math display" id="eq:paddingd">\[\begin{equation} 
+   x_{-d}=x_{-2d}=...=x_{-(k-1)d}=0
+  \tag{4.13}
+\end{equation}\]</span></p>
+<p>式子<a href="方法.html#eq:tcnd">(4.12)</a>是蒐集時點<span class="math inline">\(t,t-d,...t-(k-1)d\)</span>的輸入值做加權，輸入值兩兩相隔d期，膨脹卷積又稱為空洞(atrous)卷積。當<span class="math inline">\(d=1\)</span>時，便回到與式子<a href="方法.html#eq:tcn">(4.10)</a>相同的一般卷積，又稱做稠密(dense)卷積。</p>
+<p>研究者通常會設計多層的時序卷積網絡，藉由膨脹因子讓越高層的卷積的感受域成固定比例遞增。<a href="方法.html#fig:TCNmodel">4.3</a>即是3個大小為3的卷積核，疊加3層的時序卷積網絡，各層的膨脹因子由上而下分別為<span class="math inline">\(d=1,2,4\)</span>，而最底層的卷積核可以涵蓋到每一筆資料，不會有間斷。而每一層可涵蓋到的歷史資料則為<span class="math inline">\((k-1)d\)</span>，例如<a href="方法.html#fig:TCNmodel">4.3</a>中，最上層是由下一層的3個值卷積而成，而這3個輸入值之間各相距4個區間，因此可涵蓋到<span class="math inline">\((k-1)d=2*4=8\)</span>，8個過去資料點。因此，在<a href="方法.html#fig:TCNmodel">4.3</a>中可涵蓋到<span class="math inline">\((k-1)(1+2+4)=14\)</span>，14個歷史樣本點，加上當期則為15個輸入值，此時僅用了<span class="math inline">\(3*3=9\)</span>，9個參數，便可有15個輸入值的感受域，相較於以單層卷積，則需要一個大小為15的卷積核，也就是15個參數。用多層的時序卷積網絡，在涵蓋相同的感知域下更為有效率。也就是當堆疊的層數提高時，越上層的節點可以藉由膨脹因子，用較少的參數接觸更多底層的歷史資料點。</p>
+<div class="figure" style="text-align: center"><span id="fig:TCNmodel"></span>
+<img src="fig/TCN_model.JPG" alt="時序卷積網絡" width=".6\linewidth" />
+<p class="caption">
+圖 4.3: 時序卷積網絡
+</p>
+</div>
+<div id="時序卷積網絡與季節性自迴歸" class="section level3">
+<h3><span class="header-section-number">4.7.1</span> 時序卷積網絡與季節性自迴歸</h3>
+<p>本研究發現，若將SARIMA模型去除季節性因素後，其表現與類神經網絡無太大差別，從<a href="預測結果比較.html#tab:RMSE">5.1</a> 中，短期數的預測與LSTM模型相去不遠。因此推測若將時序卷機網絡加進季節性因素，可以提升網絡的預測能力。</p>
+<p>因此本研究在時序卷積網絡再增加季節性參數，令k為卷積核大小、d為膨脹因子，以(k,d)表示，此外令p=12表週期大小。如圖@re(fig:STCNmodel)所示，將三個卷積層(3,1)、(2,p-1)、(2,p)由下而上的相疊，目的是期望能仿照ARIMA(2,0,0)(2,0,0)的感受域。以下將說明雙時序網絡如何包含ARIMA(2,0,0)(2,0,0)的感受域，由最下層依序往上的卷積核分別為，<span class="math inline">\(\omega^{0}=(\omega^{0}_0,\omega^{0}_1,\omega^{0}_2)\)</span>、<span class="math inline">\(\omega^{1}=(\omega^{1}_0,\omega^{1}_1)\)</span>、<span class="math inline">\(\omega^{2}=(\omega^{2}_0,\omega^{2}_1)\)</span>，其中上標<span class="math inline">\((i)\)</span>表示第幾層，0為第一層，2為最上層。假設有一時間序列<span class="math inline">\(z=\{z_t\}^{T-1}_{t=0}\)</span>，經過第0層卷積層的產出可表示為，</p>
+<p><span class="math display">\[(\omega^{(0)}*z)(t)=\omega^{(0)}_0z_t+\omega^{(0)}_1z_{t-1}+\omega^{(0)}_2z_{t-2}\]</span></p>
+<p>再將第0層產出套入第一層卷積後的結果可表示為，</p>
+<p><span class="math display">\[\omega^{(1)}[\omega^{(0)}_0z_t+\omega^{(0)}_1z_{t-1}+\omega^{(0)}_2z_{t-2}]+\omega^{(1)}[\omega^{(0)}_0z_{t-(p-1)}+\omega^{(0)}_1z_{t-p}+\omega^{(0)}_2z_{t-(p+1)}]\]</span></p>
+<p><span class="math display">\[\begin{align*}
+(\omega^{(1)}*\omega^{(0)}*z)(t)&amp;=\omega^{(1)}(\omega^{(0)}*z)(t)+\omega^{(1)}(\omega^{(0)}*z)(t-(p-1)) \\
+      &amp;= \omega^{(1)_0}[\omega^{(0)}_0z_t+\omega^{(0)}_1z_{t-1}+\omega^{(0)}_2z_{t-2}] \\
+      &amp;+\omega^{(1)}_1[\omega^{(0)}_0z_{t-(p-1)}+\omega^{(0)}_1z_{t-p}+\omega^{(0)}_2z_{t-(p+1)}]
+\end{align*}\]</span></p>
+<p>再將上式套入第2個卷積層</p>
+<p><span class="math display">\[\begin{align*}
+(\omega^{(2)}*\omega^{(1)}*\omega^{(0)}*z)(t) &amp;=\omega^{(2)}(\omega^{(1)}*\omega^{(0)}*z)(t)+\omega^{(2)}(\omega^{(1)}*\omega^{(0)}*z)(t-p)\\
+&amp;= \omega^{(2)}_0\omega^{(1)}_0[\omega^{(0)}_0z_t+\omega^{(0)}_1z_{t-1}+\omega^{(0)}_2z_{t-2}]\\
+      &amp;+\omega^{(2)}_0\omega^{(1)}_1[\omega^{(0)}_0z_{t-(p-1)}+\omega^{(0)}_1z_{t-p}+\omega^{(0)}_2z_{t-(p+1)}]\\
+      &amp;+\omega^{(2)}_1\omega^{(1)}_0[\omega^{(0)}_0z_{t-p}+\omega^{(0)}_1z_{t-(p+1)}+\omega^{(0)}_2z_{t-(p+2)}]\\
+      &amp;+\omega^{(2)}_1\omega^{(1)}_1[\omega^{(0)}_0z_{t-(2p-1)}+\omega^{(0)}_1z_{t-2p}+\omega^{(0)}_2z_{t-(2p+1)}]
+\end{align*}\]</span></p>
+<p>經整理後可寫為，</p>
+<p><span class="math display">\[\begin{align*}
+(\omega^{(2)}*\omega^{(1)}*\omega^{(0)}*z)(t) &amp;=\omega^{(2)}_0\omega^{(1)}_0[\omega^{(0)}_0z_t+\omega^{(0)}_1z_{t-1}+\omega^{(0)}_2z_{t-2}]\\
+&amp;+\omega^{(2)}_0\omega^{(1)}_0\omega^{(0)}_0z_{t-(p-1)}+(\omega^{(2)}_0\omega^{(1)}_1\omega^{(0)}_1+\omega^{(2)}_1\omega^{(1)}_0\omega^{(0)}_0)z_{t-p}\\
+&amp;+(\omega^{(2)}_0\omega^{(1)}_1\omega^{(0)}_2+\omega^{(2)}_1\omega^{(1)}_0\omega^{(0)}_1)z_{t-(p+1)}+\omega^{(2)}_1\omega^{(1)}_0\omega^{(0)}_2)z_{t-(p+2)}\\
+&amp;+\omega^{(2)}_1\omega^{(1)}_1[\omega^{(0)}_0z_{t-(2p-1)}+\omega^{(0)}_1z_{t-2p}+\omega^{(0)}_2z_{t-(2p+1)}]
+\end{align*}\]</span></p>
+<p>對比於<span class="math inline">\(ARIMA(2,0,0)(2,0,0)_p\)</span>的感受域，</p>
+<p><span class="math display">\[(1-\phi_1B-\phi_2B^2)(1-\Phi_1B^p-\Phi_2B^{2p})z_{t+1}=\epsilon_{t+1}\]</span>
+把落後項因子展開，</p>
+<p><span class="math display">\[\begin{align*}
+(1-\phi_1B-\phi_2B^2)(1-\Phi_1B^p-\Phi_2B^{2p}) &amp;= 1-\phi_1B-\phi_2B^2-\Phi_2B^{2p}+\phi_1\Phi_1B^{p+1}+\phi_1\Phi_2B^{2p+1}\\
+&amp;+\phi_2\Phi_1B^{p+2}+\phi_2\Phi_2B^{2p+2}
+\end{align*}\]</span></p>
+<p>式子(26)可改寫為</p>
+<p><span class="math display">\[(1-\psi(B))z_{t+1} = \epsilon_{t+1}\]</span>
+可再改寫為</p>
+<p><span class="math display">\[z_{t+1} = \psi(B)z_t+epsilon_{t+1}\]</span></p>
+<p>其中</p>
+<p><span class="math display">\[\psi(B)=\phi_1B+\phi_2B^2+\Phi_2B^{2p}-\phi_1\Phi_1B^{p+1}-\phi_1\Phi_2B^{2p+1}-\phi_2\Phi_1B^{p+2}-\phi_2\Phi_2B^{2p+2}\]</span></p>
+<div class="figure" style="text-align: center"><span id="fig:STCNmodel"></span>
+<img src="fig/STCN_model.JPG" alt="季節時序卷積網絡" width=".6\linewidth" />
+<p class="caption">
+圖 4.4: 季節時序卷積網絡
+</p>
+</div>
+<p>將時序卷積網絡與季節時序卷積網絡加以組合，稱為雙時序卷積網絡，比較雙時序卷積網絡(25)與<span class="math inline">\(ARIMA(2,0,0)(2,0,0)_p\)</span>(28)，可知雙時序卷積網絡多出<span class="math inline">\(z_{t-2},z_{t-(p+2)}\)</span>兩項，由此可知雙時序卷積網絡涵蓋<span class="math inline">\(ARIMA(2,0,0)(2,0,0)_p\)</span>的感受域。</p>
+<p>而雙時序卷積網絡是以迭代的方式來做失業率的預測，意思是要預測h期後的失業率十，先由雙時序卷積網絡預測出一期後再迭代出2期、3期直至h期。以數學式表實則為，<span class="math inline">\((z_0,z_1,...,z_T)\)</span>為輸入雙時序卷積網絡的時間序列，得到<span class="math inline">\(\hat{z}_{T+1|T}\)</span> 1期後的預測，接這再將<span class="math inline">\((z_0,z_1,...,z_T,\hat{z}_{T+1|T})\)</span>作為輸入值得到2期後預測，以此類推至h期。</p>
+</div>
+<div id="時序卷積網絡的參數設定" class="section level3">
+<h3><span class="header-section-number">4.7.2</span> 時序卷積網絡的參數設定</h3>
+<p>此外，為了增加多層堆疊的穩定度， <span class="citation">Bai et al. (<a href="#ref-baiEmpiricalEvaluationGeneric2018" role="doc-biblioref">2018</a>)</span> 使用照 <span class="citation">He, Zhang, Ren, &amp; Sun (<a href="#ref-heDeepResidualLearning2015" role="doc-biblioref">2015</a>)</span> 提出的殘差區塊(residual block)的方式，建立殘差連接(residual connections)。<span class="math inline">\(o\)</span>為網絡輸出的真實值，網絡是在學席降低<span class="math inline">\(\hat{o}\)</span>和<span class="math inline">\(o\)</span>間的損失值，殘差連接是將當期輸入值<span class="math inline">\(x_t\)</span>與當期預測值<span class="math inline">\(\hat{z_t}\)</span>做連結為一個殘差區塊，讓時序卷積網絡學習到對<span class="math inline">\(x_t\)</span>相關資訊轉換(identity mapping)的微調，亦即<span class="math inline">\(F(x_t)\)</span>，而資料對<span class="math inline">\(\hat{z_t}\)</span>的轉換(entire transformation)。寫成數學式如下，</p>
+<p><span class="math display">\[o = Activation(x_t+F(x_t))\]</span></p>
+<p>在殘差區塊中，加入整流線性單位函數(rectified linear unit, ReLU)<span class="citation">(Nair &amp; Hinton, <a href="#ref-nairRectifiedLinearUnits2010" role="doc-biblioref">2010</a>)</span> 在有膨脹因子的因果卷積層上，和運用權重正規化(weight normalization) <span class="citation">(Salimans &amp; Kingma, <a href="#ref-salimansWeightNormalizationSimple2016" role="doc-biblioref">2016</a>)</span> 在卷積網絡上。</p>
+<p>此外，在全連接層中需要調整卷積核的個數，意味著進入全連接層前一次讀取幾層的輸入值，像是讀彩色圖片時一般會選擇卷積核個數為3，因應紅綠藍三種色彩疊層；或經過全連接層後，會產生幾個特徵值(features)。雙時序卷積網絡中，也是藉由調整卷積核的個數得到不同的特徵值，讓網絡學習進而降低損失值。</p>
+<p>因雙時序卷積網絡是將時序卷積網絡與季節性時序卷積網絡進行組合，在參數調整上僅能調整卷積核個數，經實驗後發現卷積核個數為80時損失值最小，以此做為雙時序卷積網絡的模型參數。</p>
+</div>
+</div>
+</div>
+<h3>參考資料</h3>
+<div id="refs" class="references">
+<div id="ref-baiComputationAnalysisMultiple2003">
+<p>Bai, J., &amp; Perron, P. (2003). Computation and analysis of multiple structural change models. <em>Journal of Applied Econometrics</em>, <em>18</em>(1), 1–22. Retrieved from <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jae.659">https://onlinelibrary.wiley.com/doi/abs/10.1002/jae.659</a></p>
+</div>
+<div id="ref-baiEmpiricalEvaluationGeneric2018">
+<p>Bai, S., Kolter, J. Z., &amp; Koltun, V. (2018). An empirical evaluation of generic convolutional and recurrent networks for sequence modeling. <em>arXiv Preprint arXiv:1803.01271</em>.</p>
+</div>
+<div id="ref-heDeepResidualLearning2015">
+<p>He, K., Zhang, X., Ren, S., &amp; Sun, J. (2015). Deep Residual Learning for Image Recognition. <em>arXiv:1512.03385 [Cs]</em>.</p>
+</div>
+<div id="ref-hochreiterLongShortTermMemory1997">
+<p>Hochreiter, S., &amp; Schmidhuber, J. (1997). Long Short-Term Memory. <em>Neural Computation</em>, <em>9</em>(8), 1735–1780. <a href="https://doi.org/10.1162/neco.1997.9.8.1735">https://doi.org/10.1162/neco.1997.9.8.1735</a></p>
+</div>
+<div id="ref-hyndmanAutomaticTimeSeries2008">
+<p>Hyndman, R. J., &amp; Khandakar, Y. (2008). Automatic Time Series Forecasting: The forecast Package for R. <em>Journal of Statistical Software</em>, <em>27</em>(1), 1–22. <a href="https://doi.org/10.18637/jss.v027.i03">https://doi.org/10.18637/jss.v027.i03</a></p>
+</div>
+<div id="ref-leeTestingNeglectedNonlinearity1993">
+<p>Lee, T. H., White, H., &amp; Granger, C. (1993). Testing for neglected nonlinearity in time series models: A comparison of neural network methods and alternative tests. <em>Journal of Econometrics</em>, <em>56</em>(3), 269–290.</p>
+</div>
+<div id="ref-merityRegularizingOptimizingLSTM2017">
+<p>Merity, S., Keskar, N. S., &amp; Socher, R. (2017). Regularizing and Optimizing LSTM Language Models. <em>arXiv:1708.02182 [Cs]</em>. Retrieved from <a href="http://arxiv.org/abs/1708.02182">http://arxiv.org/abs/1708.02182</a></p>
+</div>
+<div id="ref-nairRectifiedLinearUnits2010">
+<p>Nair, V., &amp; Hinton, G. E. (2010). Rectified Linear Units Improve Restricted Boltzmann Machines. In.</p>
+</div>
+<div id="ref-oordWaveNetGenerativeModel2016">
+<p>Oord, A. van den, Dieleman, S., Zen, H., Simonyan, K., Vinyals, O., Graves, A., … Kavukcuoglu, K. (2016). WaveNet: A Generative Model for Raw Audio. <em>arXiv:1609.03499 [Cs]</em>.</p>
+</div>
+<div id="ref-salimansWeightNormalizationSimple2016">
+<p>Salimans, T., &amp; Kingma, D. P. (2016). Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks. <em>arXiv:1602.07868 [Cs]</em>.</p>
+</div>
+<div id="ref-terasvirtaPowerNeuralNetwork1993">
+<p>Teräsvirta, T., Lin, C.-F., &amp; Granger, C. W. J. (1993). Power of the Neural Network Linearity Test. <em>Journal of Time Series Analysis</em>, <em>14</em>(2), 209–220. <a href="https://doi.org/https://doi.org/10.1111/j.1467-9892.1993.tb00139.x">https://doi.org/https://doi.org/10.1111/j.1467-9892.1993.tb00139.x</a></p>
+</div>
+<div id="ref-uscensusbureauX13ARIMASEATSSeasonalAdjustment2017">
+<p>US Census Bureau, B. C. M. (2017). <em>X-13ARIMA-SEATS Seasonal Adjustment Program</em>. US Census Bureau. Retrieved from <a href="https://www.census.gov/srd/www/x13as/">https://www.census.gov/srd/www/x13as/</a></p>
+</div>
+<div id="ref-waibelPhonemeRecognitionUsing1989">
+<p>Waibel, A., Hanazawa, T., Hinton, G., Shikano, K., &amp; Lang, K. J. (1989). Phoneme recognition using time-delay neural networks. <em>IEEE Transactions on Acoustics, Speech, and Signal Processing</em>. Retrieved from <a href="https://ieeexplore.ieee.org/document/21701">https://ieeexplore.ieee.org/document/21701</a></p>
+</div>
+<div id="ref-weiTimeSeriesAnalysis2005">
+<p>Wei, W. W. S. (2005). <em>Time Series Analysis : Univariate and Multivariate Methods</em>. Boston.</p>
+</div>
+<div id="ref-zeileisTestingDatingStructural2003">
+<p>Zeileis, A., Kleiber, C., Krämer, W., &amp; Hornik, K. (2003). Testing and Dating of Structural Changes in Practice. <em>Computational Statistics &amp; Data Analysis</em>, <em>44</em>, 109–123.</p>
+</div>
+<div id="ref-zivotFurtherEvidenceGreat1992">
+<p>Zivot, E., &amp; Andrews, D. W. K. (1992). Further Evidence on the Great Crash, the Oil-Price Shock, and the Unit-Root Hypothesis. <em>Journal of Business &amp; Economic Statistics</em>, <em>10</em>(3), 251–270.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p><a href="https://www.ndc.gov.tw/Content_List.aspx?n=D343A0AE4FE52D43" class="uri">https://www.ndc.gov.tw/Content_List.aspx?n=D343A0AE4FE52D43</a><a href="方法.html#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+<br><br>
+<div id="disqus_thread"></div>
+<script>
+
+//var disqus_config = function () { 
+//  this.language = "zh-Hant";
+//};
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="資料與方法.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="預測結果比較.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/liao961120/ntuthesis/edit/master/example-thesis/01-install-compile.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ntu-bookdown.pdf"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
